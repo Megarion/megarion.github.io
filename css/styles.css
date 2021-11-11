@@ -7,7 +7,20 @@ body {
 
 a {
   text-decoration: none;
-  color: white;
+  color: yellow;
+}
+
+#main ul {
+  list-style: none; /* Remove default bullets */
+}
+
+#main ul li::before {
+  content: "\203A";
+  color: rgb(255, 255, 115);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 
 
