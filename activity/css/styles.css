@@ -1,0 +1,153 @@
+body {
+background-color: rgb(20, 20, 20);
+color: white;
+font-family: 'Roboto Mono', monospace;
+padding-left: 35px;
+}
+
+a {
+text-decoration: none;
+color: yellow;
+}
+
+#main ul {
+list-style: none; /* Remove default bullets */
+}
+
+#main ul li::before {
+content: "\203A";
+color: rgb(255, 255, 115);
+font-weight: bold;
+display: inline-block;
+width: 1em;
+margin-left: -1em;
+}
+
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+width: 15px;
+}
+
+::-webkit-scrollbar-track {
+background: #333333; 
+}
+
+::-webkit-scrollbar-thumb {
+background: rgb(50, 132, 255); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: rgb(27, 77, 153); 
+}
+
+
+
+/* CSS used mainly in the front page */
+#mystuff {
+display: block;
+margin-top: 50px;
+}
+
+#main {
+margin-top: 65px;
+}
+
+.category {
+color: rgb(255, 255, 122);
+}
+
+#mobileblock {
+display: none;
+}
+
+.item {
+padding: 10px;
+display: inline-block; 
+width: 475px;
+}
+
+.item a {
+color: rgb(255, 255, 255);
+}
+
+.item a:hover .banner {
+filter: brightness(1.5);
+}
+
+.item .banner {
+max-width: 350px;
+max-height: 125px;
+object-fit: cover;
+transition: 0.2s ease-in-out;
+}
+
+#contact {
+color: yellow;
+display: block; 
+margin-top: 100px;
+}
+
+#contact a {
+margin-left: 10px;
+color: rgb(118, 157, 230);
+transition: 0.2s ease-in-out;
+}
+
+#contact a:hover {
+filter: brightness(1.45);
+}
+
+.nav {
+list-style-type: none;
+margin-left: -45px;
+overflow: hidden;
+background-color: #333;
+width: 100%;
+position: fixed;
+top: -16px;
+z-index: 1000000;
+}
+
+.nav li {
+float: left;
+padding: 14px 16px;
+color: rgb(0, 144, 211);
+}
+
+.nav li a {
+display: block;
+text-align: center;
+text-decoration: none;
+color: rgb(0, 144, 211);
+}
+
+.nav li:hover {
+background-color: rgb(65, 65, 65);
+}
+
+.type {
+font-size: 50px;
+}
+
+.s {
+margin: 50px 10px;
+}
+
+.pb {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid white;
+}
+
+.pd {
+    color: rgb(128, 128, 128);
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .navop {
+        display: none;
+    }
+}
