@@ -14,7 +14,7 @@ color: yellow;
 list-style: none; /* Remove default bullets */
 }
 
-#main ul li::before {
+#mystuff ul li::before {
 content: "\203A";
 color: rgb(255, 255, 115);
 font-weight: bold;
