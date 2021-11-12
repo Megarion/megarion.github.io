@@ -129,6 +129,12 @@ a {
 
 .type {
   font-size: 50px;
+  color: rgb(106, 170, 255);
+}
+
+.type a {
+  color: rgb(106, 170, 255);
+  text-decoration: currentColor;
 }
 
 .s {
