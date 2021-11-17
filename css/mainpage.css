@@ -10,6 +10,7 @@ text-decoration: none;
 color: yellow;
 }
 
+
 #main ul {
 list-style: none; /* Remove default bullets */
 }
@@ -42,6 +43,14 @@ background: rgb(50, 132, 255);
 background: rgb(27, 77, 153); 
 }
 
+
+
+/* CSS used mainly in the front page */
+#mystuff {
+display: block;
+margin-top: 50px;
+}
+
 #main {
 margin-top: 65px;
 }
@@ -54,14 +63,34 @@ color: rgb(255, 255, 122);
 display: none;
 }
 
-.type {
-font-size: 50px;
-color: rgb(106, 170, 255);
+.item {
+    width: 275px;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.2s ease-in-out;
+    border: 2px solid rgb(0, 144, 211);
+    float: left;
+    margin: 25px;
 }
 
-.type a {
-color: rgb(106, 170, 255);
-text-decoration: currentColor;
+.item:hover {
+    transform: scale(1.1);
+}
+
+#contact {
+color: yellow;
+display: block; 
+margin-top: 100px;
+}
+
+#contact a {
+margin-left: 10px;
+color: rgb(118, 157, 230);
+transition: 0.2s ease-in-out;
+}
+
+#contact a:hover {
+filter: brightness(1.45);
 }
 
 .nav {
@@ -75,8 +104,14 @@ top: -16px;
 z-index: 1000000;
 }
 
-.nav li {
+.nav .left {
 float: left;
+padding: 14px 16px;
+color: rgb(0, 144, 211);
+}
+
+.nav .right {
+float: right;
 padding: 14px 16px;
 color: rgb(0, 144, 211);
 }
@@ -92,12 +127,50 @@ color: rgb(0, 144, 211);
 background-color: rgb(65, 65, 65);
 }
 
+.type {
+font-size: 50px;
+color: rgb(106, 170, 255);
+}
+
+.type a {
+color: rgb(106, 170, 255);
+text-decoration: currentColor;
+}
+
 .s {
 margin: 50px 10px;
 }
 
-@media only screen and (max-width: 600px) {
-    .navop {
+#contact {
+display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    #navco {
         display: none;
+    }
+
+    #contact {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #navop {
+        display: none;
+    }
+}
+
+#mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 400px) {
+    #desktop {
+        display: none;
+    }
+
+    #mobile {
+        display: block;
     }
 }

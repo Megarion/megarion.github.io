@@ -31,7 +31,7 @@
         gtag('config', 'G-TFLJKZZZVJ');
     </script>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mainpage.css">
     <link rel="icon" href="assets/favicon.ico" />
 </head>
 
@@ -53,32 +53,33 @@
         
         <div id="mystuff">
             <!-- <h1 class="type">Programming</h1> -->
-            <div id="games" class="s">
-                <h2 class="category">Games</h2>
-                <ul>
-                    <li><a href="https://megarion.itch.io/ocean-remotion">[SEAJAM] Ocean Remotion</a></li>
-                </ul>
+            <div id="desktop">
+                <h1 class="type">Games</h1>
+                <a href="https://megarion.itch.io/ocean-remotion"><img src="assets/1.png" class="item"></a>
+                <a href="https://megarion.itch.io/d-bug"><img src="assets/2.png" class="item"></a>
             </div>
-            <div id="tools" class="s">
-                <h2 class="category">Tools</h2>
-                <ul>
-                    <li><a href="https://github.com/Megarion/Data-Generator">Python Data Generator</a></li>
-                </ul>
+            <div id="mobile">
+                <div id="games" class="s">
+                    <h2 class="category">Games</h2>
+                    <ul>
+                        <li><a href="https://megarion.itch.io/ocean-remotion">[SEAJAM] Ocean Remotion</a></li>
+                        <li><a href="https://megarion.itch.io/d-bug">[Game Off 2021] D-BUG</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <div id="mobileblock">
+        <!-- <div id="mobileblock">
             <h1 class="type">Pages</h1>
             <h2><a href="activity/">Activity</a></h2>
             <h2><a href="license/">License</a></h2>
 
-            <br>
-
             <h2><i>You are using mobile!</i></h2>
             <h3 style="color: gray;"><i>Come back when you have a desktop.</i></h3>
-        </div>
+        </div> -->
 
-        <div id="contact">
+        <div id="contact" class="s" style="clear: both;">
+            <h2 class="category">Contact</h2>
             <b><a href="https://www.youtube.com/channel/UCBrlr_nVSQ_4kZtsY58Q8wA">YouTube</a></b>
             <b><a href="https://github.com/Megarion">GitHub</a></b>
             <b><a href="https://megarion.itch.io/">Itch</a></b>
@@ -92,12 +93,12 @@
         &copy 2021 Megarion
     </footer> -->
 
-    <script>
+    <!-- <script>
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             document.getElementById('mystuff').style.display = "none";
             document.getElementById('mobileblock').style.display = "block";
         }
-    </script>
+    </script> -->
 
 </body>
 
