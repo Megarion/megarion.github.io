@@ -75,6 +75,7 @@ display: none;
 
 .item:hover {
     transform: scale(1.1);
+    border: 2px solid rgb(119, 180, 209);
 }
 
 #contact {
@@ -143,6 +144,7 @@ margin: 50px 10px;
 
 #contact {
 display: none;
+clear: both;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -155,9 +157,18 @@ display: none;
     }
 }
 
+#detachedpages {
+    display: none;
+    clear: both;
+}
+
 @media only screen and (max-width: 600px) {
     #navop {
         display: none;
+    }
+
+    #detachedpages {
+        display: block;
     }
 }
 
