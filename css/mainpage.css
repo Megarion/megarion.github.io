@@ -116,6 +116,7 @@ background-color: rgb(65, 65, 65);
 .type {
 font-size: 50px;
 color: rgb(106, 170, 255);
+clear: both;
 }
 
 .type a {
