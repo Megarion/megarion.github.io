@@ -54,7 +54,7 @@ display: none;
     transition: 0.2s ease-in-out;
     border: 2px solid rgb(0, 144, 211);
     float: left;
-    margin: 25px;
+    margin: 0px 25px 70px 25px;
 }
 
 .item:hover {
@@ -125,7 +125,7 @@ text-decoration: currentColor;
 }
 
 .s {
-margin: 50px 10px;
+    margin: 70px 10px;
 }
 
 #contact {
