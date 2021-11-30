@@ -39,27 +39,24 @@
     <ul class="nav">
         <a href="https://megarion.github.io/"><li class="left"><b>Megarion</b></li></a>
         <a href="license/"><li id="navop" class="left">License</li></a>
-
-        <a><li id="navco" class="right" style="margin-right: 100px;">Megarion#0892</li></a>
-        <a href="https://gdbrowser.com/u/megarion"><li id="navco" class="right">Geometry Dash</li></a>
-        <a href="https://github.com/Megarion"><li id="navco" class="right">GitHub</li></a>
-        <a href="https://megarion.itch.io/"><li id="navco" class="right">Itch</li></a>
-        <a href="https://www.youtube.com/channel/UCBrlr_nVSQ_4kZtsY58Q8wA"><li id="navco" class="right">YouTube</li></a>
-        
     </ul>
 
     <div id="main">
         
+        <div id="control">
+            <button onclick="nav1()">About Me</button> <span id="deco1">>></span> <button onclick="nav2()">My Stuff</button>
+        </div>
+
         <div id="mystuff">
-            <!-- <h1 class="type">Programming</h1> -->
             <div id="desktop">
                     <h1 class="type">Games</h1>
-                    <a href="https://megarion.itch.io/polygon-rush"><img src="assets/2.png" class="item"></a>
-                    <a href="https://megarion.itch.io/ocean-remotion"><img src="assets/1.png" class="item"></a>
+                    <a href="https://megarion.itch.io/polygon-rush"><img src="assets/img/2.png" class="item"></a>
+                    <a href="https://megarion.itch.io/ocean-remotion"><img src="assets/img/1.png" class="item"></a>
                 
                     <h1 class="type">Tools</h1>
-                    <a href="https://megarion.github.io/NOCOPY"><img src="assets/3.png" class="item"></a>
+                    <a href="https://megarion.github.io/NOCOPY"><img src="assets/img/3.png" class="item"></a>
             </div>
+
             <div id="mobile">
                 <div id="games" class="s">
                     <h2 class="category">Games</h2>
@@ -77,9 +74,37 @@
             </div>
         </div>
 
-        <div id="detachedpages">
-            <h1 class="type">Pages</h1>
-            <h2><a href="license/">License</a></h2>
+        <div id="aboutme">
+            <h1 class="type">About Me</h1>
+            <p>Self taught programmer and game designer.</p>
+
+            <br>
+
+            <h2 style="color: rgb(71, 172, 255);">Languages and Tools</h2>
+            <object data="assets/icon/lang/html.svg" type="image/svg+xml" class="icon"></object>
+            <object data="assets/icon/lang/css.svg" type="image/svg+xml" class="icon"></object>
+            <object data="assets/icon/lang/javascript.svg" type="image/svg+xml" class="icon"></object>
+            <object data="assets/icon/lang/cpp.svg" type="image/svg+xml" class="icon"></object>
+            <object data="assets/icon/lang/python.svg" type="image/svg+xml" class="icon"></object>
+
+            <br>
+
+            <div id="contact">
+                <h2 style="color: rgb(71, 172, 255);">Contact</h2>
+
+                <a href="https://www.youtube.com/channel/UCBrlr_nVSQ_4kZtsY58Q8wA">
+                    <img src="assets/icon/contact/youtube.png" type="image/svg+xml" class="icon"></img>
+                </a>
+
+                <a href="https://github.com/Megarion">
+                    <img src="assets/icon/contact/github.png" class="icon"></img>
+                </button>
+            </div>
+
+            <div id="detachedpages">
+                <h2 style="color: rgb(71, 172, 255);">Pages</h2>
+                <h3><a href="license/">License</a></h3>
+            </div>
         </div>
 
         <div id="mobileblock">
@@ -87,27 +112,23 @@
             <h3 style="color: gray;"><i>Come back when you have a desktop.</i></h3>
         </div>
 
-        <div id="contact" class="s">
-            <h2 class="category">Contact</h2>
-            <b><a href="https://www.youtube.com/channel/UCBrlr_nVSQ_4kZtsY58Q8wA">YouTube</a></b>
-            <b><a href="https://github.com/Megarion">GitHub</a></b>
-            <b><a href="https://megarion.itch.io/">Itch</a></b>
-            <b><a href="https://gdbrowser.com/u/megarion">Geometry Dash</a></b>
-            <b><a>Megarion#0892</a></b>
-        </div>
-
     </div>
+
+    <script>
+        function nav1(){
+            document.getElementById("aboutme").style.display = "block";
+            document.getElementById("mystuff").style.display = "none";
+        }
+
+        function nav2(){
+            document.getElementById("aboutme").style.display = "none";
+            document.getElementById("mystuff").style.display = "block";
+        }
+    </script>
 
     <!-- <footer>
         &copy 2021 Megarion
     </footer> -->
-
-    <!-- <script>
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            document.getElementById('mystuff').style.display = "none";
-            document.getElementById('mobileblock').style.display = "block";
-        }
-    </script> -->
 
 </body>
 

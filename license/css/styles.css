@@ -16,7 +16,7 @@ width: 15px;
 }
 
 ::-webkit-scrollbar-track {
-background: #333333; 
+background: #353535; 
 }
 
 ::-webkit-scrollbar-thumb {
@@ -27,16 +27,20 @@ background: rgb(50, 132, 255);
 background: rgb(27, 77, 153); 
 }
 
+
+
+/* CSS used mainly in the front page */
 #main {
-margin-top: 65px;
+text-align: center;
+border: 2px solid rgb(50, 132, 255);
+border-radius: 10px;
+width: 80%;
+margin: 65px auto;
+padding: 30px 30px;
 }
 
 .category {
 color: rgb(255, 255, 122);
-}
-
-#mobileblock {
-display: none;
 }
 
 .nav {
@@ -50,17 +54,21 @@ top: -16px;
 z-index: 1000000;
 }
 
-.type {
-font-size: 50px;
-color: rgb(106, 170, 255);
+.icon {
+    width: auto;
+    height: auto;
+    max-width: 50px;
+    max-height: 50px;
+    display: inline-block;
+    margin: 5px;
+    transition: 0.2s ease-in-out;
 }
 
-.type a {
-color: rgb(106, 170, 255);
-text-decoration: currentColor;
+.icon:hover {
+    transform: scale(1.2);
 }
 
-.nav li {
+.nav .left {
 float: left;
 padding: 14px 16px;
 color: rgb(0, 144, 211);
@@ -77,12 +85,11 @@ color: rgb(0, 144, 211);
 background-color: rgb(65, 65, 65);
 }
 
-.s {
-margin: 50px 10px;
+.type {
+    font-size: 50px;
+    color: rgb(106, 170, 255);
 }
 
-@media only screen and (max-width: 600px) {
-    .navop {
-        display: none;
-    }
+.s {
+    margin: 70px 10px;
 }
