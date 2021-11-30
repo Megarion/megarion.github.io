@@ -115,6 +115,11 @@
     </div>
 
     <script>
+        var isCached = performance.getEntriesByType("navigation")[0].transferSize === 0;
+        if(isCached){
+            location.reload();
+        }
+
         function nav1(){
             document.getElementById("aboutme").style.display = "block";
             document.getElementById("mystuff").style.display = "none";
