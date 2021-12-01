@@ -2,7 +2,6 @@ body {
 background-color: rgb(20, 20, 20);
 color: white;
 font-family: 'Roboto Mono', monospace;
-padding-left: 35px;
 }
 
 a {
@@ -99,14 +98,14 @@ display: block;
 }
 
 .nav {
-list-style-type: none;
-margin-left: -45px;
-overflow: hidden;
-background-color: #333;
-width: 100%;
-position: fixed;
-top: -16px;
-z-index: 1000000;
+    list-style-type: none;
+    margin-left: -45px;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+    position: fixed;
+    top: -16px;
+    z-index: 1000000;
 }
 
 .icon {
@@ -190,8 +189,12 @@ display: block;
     }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 350px) {
     #deco1 {
         display: none;
+    }
+    
+    #main {
+        width: 70%;
     }
 }
