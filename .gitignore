@@ -1,6 +1,7 @@
 .vscode/
 __pycache__/
 
-# HTML files/folders that are not finished or not ready to be shown
 secret/
 temp/
+scripts/temp.py
+scripts/index.py
