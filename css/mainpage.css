@@ -30,7 +30,7 @@ background: rgb(27, 77, 153);
 
 /* CSS used mainly in the front page */
 #mystuff {
-    display: none;
+    display: block;
     margin-top: 50px;
 }
 
@@ -45,27 +45,6 @@ border-radius: 10px;
 width: 80%;
 margin: 65px auto;
 padding: 30px 30px;
-}
-
-#control {
-    color: rgb(145, 189, 255);
-}
-
-#control button {
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
-    color: rgb(89, 156, 255);
-    font-family: 'Roboto Mono', monospace;
-    font-size: large;
-    transition: 0.2s ease-in-out;
-}
-
-#control button:hover {
-    color: rgb(170, 204, 255);
 }
 
 .category {

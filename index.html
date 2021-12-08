@@ -41,41 +41,8 @@
         <a href="license/"><li id="navop" class="left">License</li></a>
     </ul>
 
+
     <div id="main">
-        
-        <div id="control">
-            <button onclick="nav1()">About Me</button> <span id="deco1">>></span> <button onclick="nav2()">My Stuff</button>
-        </div>
-
-        <div id="mystuff">
-            <div id="desktop">
-                    <h1 class="type">Games</h1>
-                    <a href="https://megarion.itch.io/polygon-rush"><img src="assets/img/2.png" class="item"></a>
-                    <a href="https://megarion.itch.io/ocean-remotion"><img src="assets/img/1.png" class="item"></a>
-                
-                    <h1 class="type">Tools</h1>
-                    <a href="https://megarion.github.io/NOCOPY"><img src="assets/img/3.png" class="item"></a>
-                    <a href="https://megarion.github.io/MoistImg"><img src="assets/img/4.jfif" class="item"></a>
-            </div>
-
-            <div id="mobile">
-                <div id="games" class="s">
-                    <h2 class="category">Games</h2>
-                    <ul>
-                        <li><a href="https://megarion.itch.io/polygon-rush">[One Minute Jam] Polygon Rush</a></li>
-                        <li><a href="https://megarion.itch.io/ocean-remotion">[SEAJAM] Ocean Remotion</a></li>
-                    </ul>
-                </div>
-                <div id="games" class="s">
-                    <h2 class="category">Tools</h2>
-                    <ul>
-                        <li><a href="https://megarion.github.io/NOCOPY">NO COPY</a></li>
-                        <li><a href="https://megarion.github.io/MoistImg">MoistImg</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
         <div id="aboutme">
             <h1 class="type">About Me</h1>
             <p>Self taught programmer and game designer.</p>
@@ -116,20 +83,41 @@
 
     </div>
 
+    <div id="main">
+        <div id="mystuff">
+            <div id="desktop">
+                    <h1 class="type">Games</h1>
+                    <a href="https://megarion.itch.io/polygon-rush"><img src="assets/img/2.png" class="item"></a>
+                    <a href="https://megarion.itch.io/ocean-remotion"><img src="assets/img/1.png" class="item"></a>
+                
+                    <h1 class="type">Tools</h1>
+                    <a href="https://megarion.github.io/NOCOPY"><img src="assets/img/3.png" class="item"></a>
+                    <a href="https://megarion.github.io/MoistImg"><img src="assets/img/4.jfif" class="item"></a>
+            </div>
+
+            <div id="mobile">
+                <div id="games" class="s">
+                    <h2 class="category">Games</h2>
+                    <ul>
+                        <li><a href="https://megarion.itch.io/polygon-rush">[One Minute Jam] Polygon Rush</a></li>
+                        <li><a href="https://megarion.itch.io/ocean-remotion">[SEAJAM] Ocean Remotion</a></li>
+                    </ul>
+                </div>
+                <div id="games" class="s">
+                    <h2 class="category">Tools</h2>
+                    <ul>
+                        <li><a href="https://megarion.github.io/NOCOPY">NO COPY</a></li>
+                        <li><a href="https://megarion.github.io/MoistImg">MoistImg</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         var isCached = performance.getEntriesByType("navigation")[0].transferSize === 0;
         if(isCached){
             location.reload();
-        }
-
-        function nav1(){
-            document.getElementById("aboutme").style.display = "block";
-            document.getElementById("mystuff").style.display = "none";
-        }
-
-        function nav2(){
-            document.getElementById("aboutme").style.display = "none";
-            document.getElementById("mystuff").style.display = "block";
         }
     </script>
 
