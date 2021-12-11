@@ -56,8 +56,8 @@ display: none;
 }
 
 .item {
-    width: 275px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     transition: 0.2s ease-in-out;
     border: 2px solid rgb(0, 144, 211);
