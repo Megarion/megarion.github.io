@@ -1,8 +1,1 @@
 .vscode/
-__pycache__/
-
-secret/
-temp/
-scripts/temp.py
-scripts/index.py
-doc/
