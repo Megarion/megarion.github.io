@@ -1,5 +1,5 @@
 body {
-background-color: rgb(20, 20, 20);
+background-color: rgb(37, 37, 37);
 color: white;
 font-family: 'Roboto Mono', monospace;
 }
@@ -30,11 +30,11 @@ background: rgb(27, 77, 153);
 
 /* CSS used mainly in the front page */
 #main {
-border: 2px solid rgb(50, 132, 255);
 border-radius: 10px;
 width: 80%;
-margin: 65px auto;
+margin: 85px auto;
 padding: 30px 30px;
+background-color: rgb(29, 29, 29);
 }
 
 .category {
@@ -45,11 +45,12 @@ color: rgb(255, 255, 122);
 list-style-type: none;
 margin-left: -45px;
 overflow: hidden;
-background-color: #333;
+background-color: rgb(29, 29, 29);
 width: 100%;
 position: fixed;
 top: -16px;
 z-index: 1000000;
+border-bottom: 2px solid rgb(0, 144, 211);
 }
 
 .icon {
