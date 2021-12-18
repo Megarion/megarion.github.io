@@ -18,15 +18,17 @@ a {
 .op {
     display: inline-block;
     margin: 20px;
-    padding: 9px;
+    padding: 20px;
     background-color: #22323d;
     transition: 0.2s ease-in-out;
-    /* width: 300px;
-    height: 200px; */
 }
 
 .op p {
     color: white;
+}
+
+.op h3 {
+    color: #469ae4;
 }
 
 .op:hover {
