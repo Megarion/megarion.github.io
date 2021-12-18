@@ -1,111 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+  <head>
+      <title>Megarion</title>
+      <meta charset="UTF-8">
+      <meta content="Megarion" property="og:title">
+      <meta content="My projects are availible here" property="og:description">
+      <meta content="https://megarion.github.io/assets/favicon.ico" property="og:image">
 
-<html>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="description" content="content">
+      <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-<head>
-    <title>Megarion</title>
-    <meta charset="UTF-8">
-    <meta content="Megarion" property="og:title">
-    <meta content="My projects are availible here" property="og:description">
-    <meta content="https://megarion.github.io/assets/favicon.ico" property="og:image">
+      <meta name="google-site-verification" content="ByvRA8GEY25q07WVULyOB1i5h1h9A211VzuGCIB0V9Q" />
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="content">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
 
-    <meta name="google-site-verification" content="ByvRA8GEY25q07WVULyOB1i5h1h9A211VzuGCIB0V9Q" />
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFLJKZZZVJ"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+          gtag('config', 'G-TFLJKZZZVJ');
+      </script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFLJKZZZVJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      <script src="js/jquery-3.6.0.min.js"></script>
+      <link rel="stylesheet" href="css/pico.min.css">
 
-        gtag('config', 'G-TFLJKZZZVJ');
-    </script>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="icon" href="assets/favicon.ico" />
+  </head>
 
-    <link rel="stylesheet" href="css/mainpage.css">
-    <link rel="icon" href="assets/favicon.ico" />
-</head>
+  <body>
+    <header class="container" style="padding-bottom: 0px;">
+      <hgroup>
+        <h1>Megarion</h1>
+        <p>Programmer and game designer</p>
 
-<body>
-    <ul class="nav">
-        <a href="https://megarion.github.io/"><li class="left"><b>Megarion</b></li></a>
-        <a href="games/"><li id="navop" class="left">Games</li></a>
-        <a href="tools/"><li id="navop" class="left">Tools</li></a>
-        <a href="music/"><li id="navop" class="left">Music</li></a>
-        <a href="license/"><li id="navop" class="left">License</li></a>
-    </ul>
+        <a href="https://megarion.itch.io/" style="margin: 5px;">Itch</a>
 
+        <a href="https://www.youtube.com/channel/UCBrlr_nVSQ_4kZtsY58Q8wA" style="margin: 5px;">YouTube</a>
 
-    <div id="main">
-        <div id="aboutme">
-            <h1 class="type">About Me</h1>
-            <p>Self taught programmer and game designer.</p>
+        <a href="https://github.com/Megarion" style="margin: 5px;">GitHub</a>
+      </hgroup>
+    </header>
 
-            <br>
+    <!-- Main -->
+    <main class="container" style="padding-top: 0px;">
+      <section>
+        <article>
+          <div class="grid">
+            <button class="tabsel" id="tga">Games</button>
+            <button class="tabsel" id="tto">Tools</button>
+            <button class="tabsel" id="tpr">Programs</button>
+          </div>
 
-            <h2 style="color: rgb(71, 172, 255);">Languages</h2>
-            <object data="assets/icon/lang/html.svg" type="image/svg+xml" class="icon"></object>
-            <object data="assets/icon/lang/css.svg" type="image/svg+xml" class="icon"></object>
-            <object data="assets/icon/lang/javascript.svg" type="image/svg+xml" class="icon"></object>
-            <object data="assets/icon/lang/cpp.svg" type="image/svg+xml" class="icon"></object>
-            <object data="assets/icon/lang/python.svg" type="image/svg+xml" class="icon"></object>
+          <!-- Add new Divisions with the "grid" class to add more items-->
 
-            <br>
-
-            <div id="contact">
-                <h2 style="color: rgb(71, 172, 255);">Contact</h2>
-
-                <a href="https://megarion.itch.io/">
-                    <img src="assets/icon/contact/itch.png" type="image/svg+xml" class="icon"></img>
-                </a>
-
-                <a href="https://www.youtube.com/channel/UCBrlr_nVSQ_4kZtsY58Q8wA">
-                    <img src="assets/icon/contact/youtube.jpg" type="image/svg+xml" class="icon"></img>
-                </a>
-
-                <a href="https://github.com/Megarion">
-                    <img src="assets/icon/contact/github.png" class="icon"></img>
-                </a>
+          <div class="sel" id="ga">
+            <div class="grid">
+              <a class="op" href="https://megarion.itch.io/polygon-rush">
+                <h3>Polygon Rush</h3>
+                <p>Submission for One Minute Jam</p>
+              </a>
+              
+              <a class="op" href="https://megarion.itch.io/ocean-remotion">
+                <h3>Ocean Remotion</h3>
+                <p>Game made for SeaJam</p>
+              </a>
             </div>
 
-            <div id="pages">
-                <h2 style="color: rgb(71, 172, 255);">Pages</h2>
+          </div>
 
-                <a href="games/" class="link">Games</a>
-                <a href="tools/" class="link">Tools</a>
-                <a href="music/" class="link">Music</a>
-                <a href="license/" class="link">License</a>
+          <div class="sel" id="to">
+              <div class="grid">
+                <a class="op" href="https://megarion.github.io/NOCOPY">
+                  <h3>NoCopy</h3>
+                  <p>Text converter that change normal characters to look-alike Unicode characters that behaves differently</p>
+                </a>
+                
+                <a class="op" href="https://megarion.github.io/MoistImg">
+                  <h3>MoistImg</h3>
+                  <p>A (joke) Chrome extension that replace all images with MoistCr1TiKaL</p>
+                </a>
+              </div>
+          </div>
 
-            </div>
-        </div>
+          <div class="sel" id="pr">
+            <p>Nothing here yet</p>
+          </div>
+        </article>
+      </section>
 
-        <div id="mobileblock">
-            <h2><i>You are using mobile!</i></h2>
-            <h3 style="color: gray;"><i>Come back when you have a desktop.</i></h3>
-        </div>
+      <script>
+        $(document).ready(function(){
+            $('#ga').show();
+            $('#to').hide();
+            $('#pr').hide();
 
-    </div>
+            $('#tga').css("filter", "brightness(120%)");
 
-    <script>
-        var isCached = performance.getEntriesByType("navigation")[0].transferSize === 0;
-        if(isCached){
-            location.reload();
-        }
-    </script>
+            $('#tga').click(function(){
+              $('#ga').show();
+              $('#to').hide();
+              $('#pr').hide();
 
-    <!-- <footer>
-        &copy 2021 Megarion
-    </footer> -->
+              $('#tga').css("filter", "brightness(120%)");
+            });
 
-</body>
+            $('#tto').click(function(){
+              $('#ga').hide();
+              $('#to').show();
+              $('#pr').hide();
 
+              $('#tto').css("filter", "brightness(120%)");
+            });
+
+            $('#tpr').click(function(){
+              $('#ga').hide();
+              $('#to').hide();
+              $('#pr').show();
+
+              $('#tpr').css("filter", "brightness(120%)");
+            });
+      });
+      </script>
+  </body>
 </html>
