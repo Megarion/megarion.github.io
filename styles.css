@@ -21,6 +21,7 @@ a {
     padding: 20px;
     background-color: #22323d;
     transition: 0.2s ease-in-out;
+    border-radius: 10px;
 }
 
 .op p {
