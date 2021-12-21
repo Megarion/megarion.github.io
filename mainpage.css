@@ -1,0 +1,30 @@
+.tabsel {
+    display: inline-block;
+}
+
+.sel {
+    text-align: center;
+    margin: 20px;
+}
+
+.op {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    background-color: #22323d;
+    transition: 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+.op p {
+    color: white;
+}
+
+.op h3 {
+    color: #469ae4;
+}
+
+.op:hover {
+    transform: scale(1.1);
+    background-color: rgb(50, 72, 87);
+}
