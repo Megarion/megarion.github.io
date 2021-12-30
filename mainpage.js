@@ -1,3 +1,6 @@
+$("body").hide();
+$("body").fadeIn("slow");
+
 $(document).ready(function(){
     $('#po').show();
     $('#ga').hide();
