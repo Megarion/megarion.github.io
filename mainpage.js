@@ -1,63 +1,48 @@
-$("body").hide();
-$("body").fadeIn("slow");
-$("body").show();
-
-$(document).ready(function(){
-    $('#po').show();
+function hideAllTabs(){
+    $('#po').hide();
     $('#ga').hide();
     $('#to').hide();
     $('#pr').hide();
 
-    $('#tpo').css("filter", "brightness(120%)");
+    $('#tpo').css("filter", "brightness(100%)");
     $('#tga').css("filter", "brightness(100%)");
     $('#tto').css("filter", "brightness(100%)");
     $('#tpr').css("filter", "brightness(100%)");
+}
+
+$(document).ready(function(){
+    // Fade in effect
+    $("body").hide();
+    $("body").fadeIn("slow");
+    $("body").show();
+
+    // Tabs
+    hideAllTabs();
+
+    $('#po').show();
+    $('#tpo').css("filter", "brightness(120%)");
 
     $('#tpo').click(function(){
+        hideAllTabs();
         $('#po').show();
-        $('#ga').hide();
-        $('#to').hide();
-        $('#pr').hide();
-
         $('#tpo').css("filter", "brightness(120%)");
-        $('#tga').css("filter", "brightness(100%)");
-        $('#tto').css("filter", "brightness(100%)");
-        $('#tpr').css("filter", "brightness(100%)");
     });
 
     $('#tga').click(function(){
-        $('#po').hide();
+        hideAllTabs();
         $('#ga').show();
-        $('#to').hide();
-        $('#pr').hide();
-
-        $('#tpo').css("filter", "brightness(100%)");
         $('#tga').css("filter", "brightness(120%)");
-        $('#tto').css("filter", "brightness(100%)");
-        $('#tpr').css("filter", "brightness(100%)");
     });
 
     $('#tto').click(function(){
-        $('#po').hide();
-        $('#ga').hide();
+        hideAllTabs();
         $('#to').show();
-        $('#pr').hide();
-
-        $('#tpo').css("filter", "brightness(100%)");
-        $('#tga').css("filter", "brightness(100%)");
         $('#tto').css("filter", "brightness(120%)");
-        $('#tpr').css("filter", "brightness(100%)");
     });
 
     $('#tpr').click(function(){
-        $('#po').hide();
-        $('#ga').hide();
-        $('#to').hide();
+        hideAllTabs();
         $('#pr').show();
-
-        $('#tpo').css("filter", "brightness(100%)");
-        $('#tga').css("filter", "brightness(100%)");
-        $('#tto').css("filter", "brightness(100%)");
         $('#tpr').css("filter", "brightness(120%)");
     });
 });
