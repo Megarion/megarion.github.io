@@ -1,3 +1,5 @@
+// To add a new tab: Hide the tab and add the button's CSS in the hideAllTabs function. Add a new event that when the new button is clicked, hide all tabs and show the new tab. 
+
 function hideAllTabs(){
     $('#po').hide();
     $('#ga').hide();
