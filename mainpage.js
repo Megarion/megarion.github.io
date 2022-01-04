@@ -1,5 +1,6 @@
 $("body").hide();
 $("body").fadeIn("slow");
+$("body").show();
 
 $(document).ready(function(){
     $('#po').show();
