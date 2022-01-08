@@ -74,104 +74,107 @@
 <main class="container" style="padding-top: 0px;">
 
 <section>
-    <h2 class="middle">
-        <span>My Stuff</span>
-        <!-- data-tooltip="The further you scroll down, the worse it gets." -->
-    </h2>
 
-    <article style="margin: 0px;">
+<h2 class="middle">
+    <span>My Stuff</span>
+    <!-- data-tooltip="The further you scroll down, the worse it gets." -->
+</h2>
+
+<article style="margin: 0px;">
+
+    <div class="grid">
+        <button class="tabsel" id="tpo">Projects</button>
+        <button class="tabsel" id="tga">Games</button>
+        <button class="tabsel" id="tto">Tools</button>
+        <button class="tabsel" id="tpr">Programs</button>
+    </div>
+
+    <!-- Add new Divisions with the "grid" class to add more items every 2 items-->
+
+    <div class="sel" id="po">
+        <p>Nothing here yet</p>
+    </div>
+
+    <div class="sel" id="ga">
         <div class="grid">
-            <button class="tabsel" id="tpo">Projects</button>
-            <button class="tabsel" id="tga">Games</button>
-            <button class="tabsel" id="tto">Tools</button>
-            <button class="tabsel" id="tpr">Programs</button>
+            <a target="_blank" class="op" href="https://megarion.itch.io/polygon-rush">
+                <h3>Polygon Rush</h3>
+                <p>🔺 Submission for One Minute Jam</p>
+            </a>
+
+            <a target="_blank" class="op" href="https://megarion.itch.io/ocean-remotion">
+                <h3>Ocean Remotion</h3>
+                <p>🌊 Game made for SeaJam</p>
+            </a>
         </div>
 
-        <!-- Add new Divisions with the "grid" class to add more items every 2 items-->
+        <div class="grid">
+            <a target="_blank" class="op" href="https://megarion.itch.io/hold-up">
+                <h3>Hold Up</h3>
+                <p>🔼 Submission for Winter Barjam 2021</p>
+            </a>
 
-        <div class="sel" id="po">
-            <p>Nothing here yet</p>
+            <a target="_blank" class="op" href="https://megarion.itch.io/d-bug">
+                <h3>D-BUG</h3>
+                <p>🐛 Submission for Game Off 2021</p>
+            </a>
         </div>
 
-        <div class="sel" id="ga">
-            <div class="grid">
-                <a target="_blank" class="op" href="https://megarion.itch.io/polygon-rush">
-                    <h3>Polygon Rush</h3>
-                    <p>🔺 Submission for One Minute Jam</p>
-                </a>
+    </div>
 
-                <a target="_blank" class="op" href="https://megarion.itch.io/ocean-remotion">
-                    <h3>Ocean Remotion</h3>
-                    <p>🌊 Game made for SeaJam</p>
-                </a>
-            </div>
+    <div class="sel" id="to">
+        <div class="grid">
+            <a target="_blank" class="op" href="https://megarion.github.io/NOCOPY">
+                <h3>NoCopy</h3>
+                <p>🈺 Text converter that change normal characters to look-alike Unicode characters that behaves differently</p>
+            </a>
 
-            <div class="grid">
-                <a target="_blank" class="op" href="https://megarion.itch.io/hold-up">
-                    <h3>Hold Up</h3>
-                    <p>🔼 Submission for Winter Barjam 2021</p>
-                </a>
-
-                <a target="_blank" class="op" href="https://megarion.itch.io/d-bug">
-                    <h3>D-BUG</h3>
-                    <p>🐛 Submission for Game Off 2021</p>
-                </a>
-            </div>
-
+            <a target="_blank" class="op" href="https://megarion.github.io/MoistImg">
+                <h3>MoistImg</h3>
+                <p>A (joke) Chrome extension that replace all images with MoistCr1TiKaL</p>
+            </a>
         </div>
 
-        <div class="sel" id="to">
-            <div class="grid">
-                <a target="_blank" class="op" href="https://megarion.github.io/NOCOPY">
-                    <h3>NoCopy</h3>
-                    <p>🈺 Text converter that change normal characters to look-alike Unicode characters that
-                        behaves differently</p>
-                </a>
+        <div class="grid">
+            <a target="_blank" class="op" href="https://megarion.github.io/Aggressify/">
+                <h3>Aggressify</h3>
+                <p>😡 TURN TEXT INTO ANGRY MESSAGES!!!!</p>
+            </a>
 
-                <a target="_blank" class="op" href="https://megarion.github.io/MoistImg">
-                    <h3>MoistImg</h3>
-                    <p>A (joke) Chrome extension that replace all images with MoistCr1TiKaL</p>
-                </a>
-            </div>
-
-            <div class="grid">
-                <a target="_blank" class="op" href="https://megarion.github.io/Aggressify/">
-                    <h3>Aggressify</h3>
-                    <p>😡 TURN TEXT INTO ANGRY MESSAGES!!!!</p>
-                </a>
-
-                <a target="_blank" class="op" href="https://megarion.github.io/ChromeDuck">
-                    <h3>ChromeDuck</h3>
-                    <p>🦆 An useless Chrome extension that adds a duck at the bottom of your screen</p>
-                </a>
-            </div>
+            <a target="_blank" class="op" href="https://megarion.github.io/ChromeDuck">
+                <h3>ChromeDuck</h3>
+                <p>🦆 An useless Chrome extension that adds a duck at the bottom of your screen</p>
+            </a>
         </div>
+    </div>
 
-        <div class="sel" id="pr">
-            <div class="grid">
-                <a target="_blank" class="op" href="https://github.com/Megarion/Data-Generator">
-                    <h3>Data Generator</h3>
-                    <p>📁 [Python] Program to generate files based on data and template</p>
-                </a>
+    <div class="sel" id="pr">
+        <div class="grid">
+            <a target="_blank" class="op" href="https://github.com/Megarion/Data-Generator">
+                <h3>Data Generator</h3>
+                <p>📁 [Python] Program to generate files based on data and template</p>
+            </a>
 
-                <a target="_blank" class="op" href="https://github.com/Megarion/Connect4-Java">
-                    <h3>Connect Four</h3>
-                    <p>🔵 [Java] Connect Four game played in console</p>
-                </a>
-            </div>
-            <div class="grid">
-                <a target="_blank" class="op" href="https://github.com/Megarion/FuseSimulator-Raylib">
-                    <h3>Fuse Simulator</h3>
-                    <p>🧨 [C/C++ - Raylib] Simulating Fuse in Raylib</p>
-                </a>
-
-                <a target="_blank" class="op" href="https://github.com/Megarion/GunRecoil-Raylib">
-                    <h3>Gun Recoil Simulator</h3>
-                    <p>🔫 [C/C++ - Raylib] Simulating Gun Recoil in Raylib</p>
-                </a>
-            </div>
+            <a target="_blank" class="op" href="https://github.com/Megarion/Connect4-Java">
+                <h3>Connect Four</h3>
+                <p>🔵 [Java] Connect Four game played in console</p>
+            </a>
         </div>
-        </article>
+        <div class="grid">
+            <a target="_blank" class="op" href="https://github.com/Megarion/FuseSimulator-Raylib">
+                <h3>Fuse Simulator</h3>
+                <p>🧨 [C/C++ - Raylib] Simulating Fuse in Raylib</p>
+            </a>
+
+            <a target="_blank" class="op" href="https://github.com/Megarion/GunRecoil-Raylib">
+                <h3>Gun Recoil Simulator</h3>
+                <p>🔫 [C/C++ - Raylib] Simulating Gun Recoil in Raylib</p>
+            </a>
+        </div>
+    </div>
+
+</article>
+
 </section>
 
 <!--
