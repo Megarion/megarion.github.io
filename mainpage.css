@@ -29,6 +29,19 @@
     background-color: rgb(50, 72, 87);
 }
 
+.con {
+    margin: 0px; 
+    padding-right: 90px; 
+    padding-left: 90px;
+}
+
+@media screen and (max-width: 500px) {
+    .con {
+        padding-right: 25px; 
+        padding-left: 25px;
+    }
+}
+
 .middle {
     text-align: center;
 }
