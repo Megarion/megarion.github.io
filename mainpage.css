@@ -4,7 +4,6 @@
 
 .sel {
     text-align: center;
-    margin: 20px;
 }
 
 .op {
@@ -25,7 +24,7 @@
 }
 
 .op:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     background-color: rgb(50, 72, 87);
 }
 
