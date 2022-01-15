@@ -44,7 +44,7 @@ setInterval(main, 500);
 
 setInterval(() => {
     if(devtools.isOpen){
-        // window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
         window.close();
     }
 }, 250);
