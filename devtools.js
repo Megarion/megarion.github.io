@@ -44,6 +44,6 @@ setInterval(main, 500);
 
 setInterval(() => {
     if(devtools.isOpen){
-        window.close();
+        // window.close();
     }
 }, 250);

@@ -22,20 +22,29 @@ $(document).ready(function () {
 
         [
             ["Aggressify", "😡 TURN TEXT INTO ANGRY MESSAGES!!!!", "https://megarion.github.io/Aggressify/", false],
-            ["ChromeDuck", "🦆 An useless Chrome extension that adds a duck at the bottom of your screen", "https://megarion.github.io/ChromeDuck", 2, false],
-            ["NoCopy", "🈺 Text converter that change normal characters to look-alike Unicode characters that behaves differently", "https://megarion.github.io/NOCOPY", 2, false],
-            ["Website Fetcher", "🔭 Program to fetch the content of an URL (links, images, videos...)", "https://megarion.github.io/Website-Fetcher/", 2, false],
-            ["MoistImg", "A (joke) Chrome extension that replace all images with MoistCr1TiKaL", "https://megarion.github.io/MoistImg", 2, false],
-            ["RediRoll", "A Chrome extension that redirects to the Rick Roll everytime the user clicks a link", "https://megarion.github.io/RediRoll/", 2, false],
+            ["ChromeDuck", "🦆 An useless Chrome extension that adds a duck at the bottom of your screen", "https://megarion.github.io/ChromeDuck", false],
+            ["NoCopy", "🈺 Text converter that change normal characters to look-alike Unicode characters that behaves differently", "https://megarion.github.io/NOCOPY", false],
+            ["Website Fetcher", "🔭 Program to fetch the content of an URL (links, images, videos...)", "https://megarion.github.io/Website-Fetcher/", false],
+            ["MoistImg", "A (joke) Chrome extension that replace all images with MoistCr1TiKaL", "https://megarion.github.io/MoistImg", false],
+            ["RediRoll", "A Chrome extension that redirects to the Rick Roll everytime the user clicks a link", "https://megarion.github.io/RediRoll/", false],
         ],
 
         [
-            ["Fuse Simulator", "🧨 [C/C++ - Raylib] Simulating Fuse in Raylib", "https://github.com/Megarion/FuseSimulator-Raylib", 3, false],
-            ["Connect Four", "🔵 [Java] Connect Four game played in console", "https://github.com/Megarion/Connect4-Java", 3, false],
-            ["Gun Recoil Simulator", "🔫 [C/C++ - Raylib] Simulating Gun Recoil in Raylib", "https://github.com/Megarion/GunRecoil-Raylib", 3, false],
-            ["Data Generator", "📁 [Python] Program to generate files based on data and template", "https://github.com/Megarion/Data-Generator", 3, false],
+            ["Fuse Simulator", "🧨 [C/C++ - Raylib] Simulating Fuse in Raylib", "https://github.com/Megarion/FuseSimulator-Raylib", false],
+            ["Connect Four", "🔵 [Java] Connect Four game played in console", "https://github.com/Megarion/Connect4-Java", false],
+            ["Gun Recoil Simulator", "🔫 [C/C++ - Raylib] Simulating Gun Recoil in Raylib", "https://github.com/Megarion/GunRecoil-Raylib", false],
+            ["Data Generator", "📁 [Python] Program to generate files based on data and template", "https://github.com/Megarion/Data-Generator", false],
         ],
     ];
+
+    for (let i = 1; i < selOption.length; i++) {
+        for (let j = 0; j < selOption[i].length; j++) {
+            console.log(selOption[i][j]);
+            if(selOption[i][j][3]){
+                selOption[0].push(selOption[i][j]);
+            }
+        }
+    }
 
     // To add a new tab: 
     // Hide the tab and add the button's CSS in the hideAllTabs function. 
@@ -65,19 +74,18 @@ $(document).ready(function () {
 
         if (!(selOption[i].length > 0)) {
             replace = "<p>Nothing here yet</p>";
-            continue;
-        }
-
-        for (let j = 0; j < selOption[i].length; j++) {
-            if ((j + 1) % 2 == 1) {
-                replace += '<div class="grid">';
-            }
-
-            let content = '<a target="_blank" class="op" href="' + selOption[i][j][2] + '"><h3>' + selOption[i][j][0] + '</h3><p>' + selOption[i][j][1] + '</p></a>';
-            replace += content;
-
-            if ((j + 1) % 2 == 0 || j + 1 == selOption[i].length) {
-                replace += "</div>";
+        } else {
+            for (let j = 0; j < selOption[i].length; j++) {
+                if ((j + 1) % 2 == 1) {
+                    replace += '<div class="grid">';
+                }
+    
+                let content = '<a target="_blank" class="op" href="' + selOption[i][j][2] + '"><h3>' + selOption[i][j][0] + '</h3><p>' + selOption[i][j][1] + '</p></a>';
+                replace += content;
+    
+                if ((j + 1) % 2 == 0 || j + 1 == selOption[i].length) {
+                    replace += "</div>";
+                }
             }
         }
 
