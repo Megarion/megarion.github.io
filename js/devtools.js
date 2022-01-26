@@ -14,7 +14,7 @@ const emitEvent = (isOpen, orientation) => {
     }));
 };
 
-const main = ({emitEvents = true} = {}) => {
+const main = ({ emitEvents = true } = {}) => {
     const widthThreshold = globalThis.outerWidth - globalThis.innerWidth > threshold;
     const heightThreshold = globalThis.outerHeight - globalThis.innerHeight > threshold;
     const orientation = widthThreshold ? 'vertical' : 'horizontal';
@@ -39,11 +39,12 @@ const main = ({emitEvents = true} = {}) => {
     }
 };
 
-main({emitEvents: false});
+main({ emitEvents: false });
 setInterval(main, 500);
 
 setInterval(() => {
-    if(devtools.isOpen){
+    if (devtools.isOpen) {
+        alert("Nope");
         window.close();
     }
 }, 250);

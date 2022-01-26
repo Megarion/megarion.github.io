@@ -1,52 +1,117 @@
-.tabsel {
-    display: inline-block;
+* {
+    cursor: default;
 }
 
-.sel {
-    text-align: center;
+#navbar {
+    font-size: large;
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
 }
 
-.op {
-    display: inline-block;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 20px;
-    background-color: #22323d;
+#navbar-contact a {
+    color: rgb(179, 179, 179);
     transition: 0.2s ease-in-out;
-    border-radius: 10px;
 }
 
-.op p {
-    color: white;
+#navbar-contact a:hover {
+    color: rgb(152, 174, 201);
 }
 
-.op h3 {
-    color: #469ae4;
+#home-element {
+    width: 100%;
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 0;
+
+    background-color: #161b22;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.op:hover {
-    transform: scale(1.03);
-    background-color: rgb(50, 72, 87);
+#projects-element {
+    width: 100%;
+
+    z-index: -1;
+
+    display: flex;
+    justify-content: center;
 }
 
-.con {
-    margin: 0px; 
-    padding-right: 90px; 
-    padding-left: 90px;
-}
-
-@media screen and (max-width: 500px) {
-    .con {
-        padding-right: 25px; 
-        padding-left: 25px;
-    }
-}
-
-.middle {
+#home-content {
     text-align: center;
+    color: rgb(128, 128, 128);
 }
 
-.small {
-    filter: brightness(50%);
-    font-size: smaller;
+#home-content span {
+    transition: 0.2s ease-in-out;
+}
+
+#home-content span:hover {
+    color: rgb(211, 211, 211);
+}
+
+#home-contact {
+    margin: 25px;
+}
+
+#home-contact a {
+    margin: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+#home-contact a:hover {
+    color: rgb(131, 151, 175);
+}
+
+#projects-content {
+    text-align: center;
+    color: rgb(207, 207, 207);
+
+    padding-top: 55px;
+}
+
+#projects-display a div {
+    width: 380px;
+    height: 215px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+
+    background-color: #161b22;
+
+    margin: 15px;
+
+    transition: 0.2s ease-in-out;
+}
+
+#projects-display a div:hover {
+    background-color: #252d38;
+}
+
+#projects-display a {
+    color: rgb(182, 182, 182);
+}
+
+#projects-navi {
+    margin: 55px;
+}
+
+#home-navi {
+    margin: 25px;
+}
+
+@media (min-width: 992px) {
+    #home-contact {
+        display: none;
+    }
 }

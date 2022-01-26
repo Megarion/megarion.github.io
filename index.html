@@ -1,148 +1,91 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
-
-<!--
-     __  __ ______ _______       
-    |  \/  |  ____|__   __|/\    
-    | \  / | |__     | |  /  \   
-    | |\/| |  __|    | | / /\ \  
-    | |  | | |____   | |/ ____ \ 
-    |_|  |_|______|  |_/_/    \_\
--->
+<html lang="en">
 
 <head>
+    <title>Megarion</title>
+    <meta charset="UTF-8">
+    <meta content="Megarion" property="og:title">
+    <meta content="Portfolio" property="og:description">
+    <meta content="https://megarion.github.io/assets/github.png" property="og:image">
 
-<title>Megarion</title>
-<meta charset="UTF-8">
-<meta content="Megarion" property="og:title">
-<meta content="Portfolio" property="og:description">
-<meta content="https://megarion.github.io/assets/github.png" property="og:image">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="content">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="description" content="content">
-<meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="google-site-verification" content="ByvRA8GEY25q07WVULyOB1i5h1h9A211VzuGCIB0V9Q" />
 
-<meta name="google-site-verification" content="ByvRA8GEY25q07WVULyOB1i5h1h9A211VzuGCIB0V9Q" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFLJKZZZVJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TFLJKZZZVJ"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+        gtag('config', 'G-TFLJKZZZVJ');
+    </script>
 
-    gtag('config', 'G-TFLJKZZZVJ');
-</script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/devtools.js"></script>
+    <script src="project-gen.js"></script>
+    <script src="mainpage.js"></script>
 
-<script src="js/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="css/pico.min.css">
+    <link rel="stylesheet" href="css/boostrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="mainpage.css">
 
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="mainpage.css">
-<link rel="icon" href="assets/favicon.ico" />
-
+    <link rel="icon" href="assets/favicon.ico" />
 </head>
 
 <body>
 
-<!--
-     _    _ ______          _____  
-    | |  | |  ____|   /\   |  __ \
-    | |__| | |__     /  \  | |  | |
-    |  __  |  __|   / /\ \ | |  | |
-    | |  | | |____ / ____ \| |__| |
-    |_|  |_|______/_/    \_\_____/
--->
-
-<header class="container">
-    <hgroup>
-        <h1>Megarion</h1>
-        <p>Programmer and game designer</p>
-    </hgroup>
-</header>
-
-<!--
-     __  __          _____ _   _ 
-    |  \/  |   /\   |_   _| \ | |
-    | \  / |  /  \    | | |  \| |
-    | |\/| | / /\ \   | | | . ` |
-    | |  | |/ ____ \ _| |_| |\  |
-    |_|  |_/_/    \_\_____|_| \_|
--->
-
-<main class="container" style="padding-top: 0px;">
-
-<section>
-
-<h2 class="middle">
-    <span>My Stuff</span>
-    <!-- data-tooltip="The further you scroll down, the worse it gets." -->
-</h2>
-
-<article class="con">
-
-    <div class="grid">
-        <button class="tabsel" id="tpo">Projects</button>
-        <button class="tabsel" id="tto">Tools</button>
-        <button class="tabsel" id="tga">Games</button>
-        <button class="tabsel" id="tpr">Programs</button>
-    </div>
-
-    <!-- Add new Divisions with the "grid" class to add more items every 2 items-->
-
-    <div class="sel" id="spo">
-    </div>
-
-    <div class="sel" id="sga">
-    </div>
-
-    <div class="sel" id="sto">
-    </div>
-
-    <div class="sel" id="spr">
-    </div>
-
-</article>
-
-</section>
-
-<!--
-     ______ _   _ _____  
-    |  ____| \ | |  __ \ 
-    | |__  |  \| | |  | |
-    |  __| | . ` | |  | |
-    | |____| |\  | |__| |
-    |______|_| \_|_____/ 
--->
-
-<footer>
-    <div class="sel" id="contact">
-        <div class="grid">
-            <a target="_blank" class="op" href="https://github.com/Megarion">GitHub</a>
-            <a target="_blank" class="op" href="https://megarion.itch.io/">Itch</a>
-            <a target="_blank" class="op" href="https://www.youtube.com/channel/UCBrlr_nVSQ_4kZtsY58Q8wA">YouTube</a>
-            <a target="_blank" class="op" href="https://gdbrowser.com/u/megarion">Geometry Dash</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+    <b style="margin-left: 10px;">Megarion</b>
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbar-contact">
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://github.com/Megarion">GitHub</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://megarion.itch.io/">Itch</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://www.youtube.com/channel/UCBrlr_nVSQ_4kZtsY58Q8wA">YouTube</a>
+                </li>
+            </ul>
         </div>
     </div>
+</nav>
 
-    <span class="small" id="copyright">&copy; 2021-2022 Megarion</span>
-</footer>
+<div id="home-element">
+    <div id="home-content">
+        <span><h1>Hello</h1></span>
+        <span><h3>I'm Megarion</h3></span>
+        <span><h4>I like coding</h4></span>
+        
+        <button id="projects-navi" type="button" class="btn btn-success">View projects</button>
 
-</main>
+        <div id="home-contact">
+            <a class="link-secondary" href="https://github.com/Megarion">GitHub</a>
+            <a class="link-secondary" href="https://megarion.itch.io/">Itch</a>
+            <a class="link-secondary" href="https://www.youtube.com/channel/UCBrlr_nVSQ_4kZtsY58Q8wA">YouTube</a>
+        </div>
+        
+        <span><p>&copy; 2021-2022 Megarion</p></span>
+    </div>
+</div>
 
-<!--
-      _____ ____  _____  ______ 
-     / ____/ __ \|  __ \|  ____|
-    | |   | |  | | |  | | |__   
-    | |   | |  | | |  | |  __|  
-    | |___| |__| | |__| | |____ 
-     \_____\____/|_____/|______|
--->
-
-<script src="devtools.js"></script>
-
-<script src="mainpage.js"></script>
+<div id="projects-element">
+    <div id="projects-content">
+        <button id="home-navi" type="button" class="btn btn-primary">Go back</button>
+        
+        <h1>Projects</h1>
+        <div id="projects-display">
+            <a href="#link"><div><span><h4>#title</h4><p>#description</p></span></div></a>
+        </div>
+    </div>
+</div>
 
 </body>
 
