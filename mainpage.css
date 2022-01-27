@@ -2,6 +2,10 @@
     cursor: default;
 }
 
+body {
+    background-color: #0d1117;
+}
+
 #navbar {
     font-size: large;
     z-index: 9999;
