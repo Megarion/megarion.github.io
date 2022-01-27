@@ -28,7 +28,6 @@ function projectGen() {
             let re = new RegExp(projectsListRep[j], 'g');
             projectEdit = projectEdit.replace(re, projectSel[j]);
         }
-        console.log(projectEdit);
         content+=projectEdit;
     }
     return content;
