@@ -22,7 +22,7 @@ let projectTemplate = '<a href="#link"><div><span><h4>#title</h4><p>#description
 function projectGen() {
     let content = "";
     for (let i = 0; i < projectsList.length; i++) {
-        projectSel = projectsList[i];
+        let projectSel = projectsList[i];
         let projectEdit = projectTemplate;
         for (let j = 0; j < projectsListRep.length; j++) {
             let re = new RegExp(projectsListRep[j], 'g');
