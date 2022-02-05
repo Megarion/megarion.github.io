@@ -82,7 +82,7 @@ body {
 }
 
 #projects-display a div {
-    width: 380px;
+    width: 400px;
     height: 215px;
     
     display: flex;
@@ -108,6 +108,10 @@ body {
     color: rgb(182, 182, 182);
 }
 
+#projects-title {
+    margin: 15px;
+}
+
 #projects-navi {
     margin: 55px;
 }
@@ -121,3 +125,13 @@ body {
         display: none;
     }
 }
+
+/* @media (min-width: 768px) {
+    #projects-title {
+        text-align: left;
+    }
+
+    #projects-display a {
+        display: inline-block;
+    }
+} */
