@@ -18,18 +18,30 @@ let projectsList = [
 
 let projectsListRep = ["#title", "#description", "#link"];
 
-let projectTemplate = '<a href="#link"><div><span><h4>#title</h4><p>#description</p></span></div></a>';
+let projectTemplate = '<div class="col-md"><a href="#link"><div><span><h4>#title</h4><p>#description</p></span></div></a></div>';
 
 function projectGen() {
-    let content = "";
+    let content = '<div class="container">';
     for (let i = 0; i < projectsList.length; i++) {
         let projectSel = projectsList[i];
-        let projectEdit = projectTemplate;
+
+        let projectEdit = "";
+
+        if (i % 3 == 0) {
+            projectEdit+= '<div class="row">';
+        }
+
+        projectEdit += projectTemplate;
         for (let j = 0; j < projectsListRep.length; j++) {
             let re = new RegExp(projectsListRep[j], 'g');
             projectEdit = projectEdit.replace(re, projectSel[j]);
         }
+
+        if (i % 3 == 2 || i == projectsList.length - 1) {
+            projectEdit+= '</div>';
+        }
         content+=projectEdit;
     }
+    content += '</div>';
     return content;
 }

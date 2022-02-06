@@ -82,7 +82,7 @@ body {
 }
 
 #projects-display a div {
-    width: 400px;
+    /* width: 400px; */
     height: 215px;
     
     display: flex;
@@ -125,6 +125,8 @@ body {
         display: none;
     }
 }
+
+
 
 /* @media (min-width: 768px) {
     #projects-title {
