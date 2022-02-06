@@ -20,6 +20,8 @@ function projects() {
 
 $(document).ready(function () {
     $('#projects-display').html(projectGen());
+    $('#navbar-contact').html(contactGen());
+    $('#home-contact').html(contactGenAlt());
 
     $('body').hide();
     $('body').fadeIn(500);
