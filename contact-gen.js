@@ -1,15 +1,17 @@
+// List
 let contactList = [
     ["https://github.com/Megarion", "GitHub"],
     ["https://megarion.itch.io/", "Itch.io"],
     ["https://www.youtube.com/channel/UCBrlr_nVSQ_4kZtsY58Q8wA", "YouTube"],
     ["javascript:alert('Megarion#0892');", "Discord"],
-]
+];
 
+// Templates
 let contactListRep = ["#link", "#title"];
-
 let contactTemplate = '<li class="nav-item"><a class="nav-link active" href="#link">#title</a></li>';
 let contactTemplateAlt = '<a class="link-secondary" href="#link">#title</a>';
 
+// Generate
 function contactGen() {
     let content = '';
     for (let i = 0; i < contactList.length; i++) {
@@ -28,6 +30,7 @@ function contactGen() {
     return content;
 }
 
+// Generate for smaller devices
 function contactGenAlt() {
     let content = '';
     for (let i = 0; i < contactList.length; i++) {

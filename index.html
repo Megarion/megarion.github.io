@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Website properties -->
 <head>
     <title>Megarion</title>
     <meta charset="UTF-8">
@@ -25,23 +26,28 @@
         gtag('config', 'G-TFLJKZZZVJ');
     </script>
 
+    <!-- Scripts -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="project-gen.js"></script>
     <script src="contact-gen.js"></script>
     <script src="mainpage.js"></script>
 
+    <!-- Styles -->
     <link rel="stylesheet" href="css/boostrap.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="mainpage.css">
-
+    
     <link rel="icon" href="assets/favicon.ico" />
 </head>
 
+<!-- Website content -->
 <body>
 
+<!-- Navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
     <b style="margin-left: 10px;">Megarion</b>
+    <!-- Contacts -->
     <div class="container-fluid">
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbar-contact">
@@ -50,6 +56,7 @@
     </div>
 </nav>
 
+<!-- Home screen -->
 <div id="home-element">
     <div id="home-content">
         <span><h1>Hello</h1></span>
@@ -58,21 +65,23 @@
         
         <button id="projects-navi" type="button" class="btn btn-success">View projects</button>
 
+        <!-- Contacts (for smaller devices) -->
         <div id="home-contact"></div>
         
         <span><p>&copy; 2021-2022 Megarion</p></span>
     </div>
 </div>
 
+<!-- Projects -->
 <div id="projects-element">
     <div id="projects-content">
-        <button id="home-navi" type="button" class="btn btn-primary">Go back</button>
-        
-        <div id="projects-list">
-            <h1 id="projects-title">Projects</h1>
-                <div id="projects-display"></div>
-            </div>
+    <button id="home-navi" type="button" class="btn btn-primary">Go back</button>
+    
+    <div id="projects-list">
+        <h1 id="projects-title">Projects</h1>
+            <div id="projects-display"></div>
         </div>
+    </div>
 </div>
 
 </body>

@@ -1,5 +1,6 @@
 let homepageActive = true;
 
+// Activate home page
 function home() {
     if (homepageActive) return;
     homepageActive = true;
@@ -9,6 +10,7 @@ function home() {
     }, 500);
 }
 
+// Activate projects page
 function projects() {
     if (!homepageActive) return;
     homepageActive = false;
@@ -18,17 +20,22 @@ function projects() {
     }, 500);
 }
 
+// Main script
 $(document).ready(function () {
+    // Prepare
+    $('#projects-element').hide();
+
+    // Generate
     $('#projects-display').html(projectGen());
     $('#navbar-contact').html(contactGen());
     $('#home-contact').html(contactGenAlt());
 
+    // Animation
     $('body').hide();
     $('body').fadeIn(500);
     $('body').show();
 
-    $('#projects-element').hide();
-
+    // Events
     $('#home-navi').click(function () {
         home();
     });

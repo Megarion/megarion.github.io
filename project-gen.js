@@ -1,3 +1,4 @@
+// List
 let projectsList = [
     ["Polygon Rush", "🔺 Game Submission for One Minute Jam", "https://megarion.itch.io/polygon-rush"],
     ["Card Generator", "🎴 Website to generate Cards and share them", "https://megarion.github.io/Card-Generator/"],
@@ -14,12 +15,13 @@ let projectsList = [
     ["Fuse Simulator", "🧨 [C/C++ - Raylib] Simulating Fuse in Raylib", "https://github.com/Megarion/FuseSimulator-Raylib"],
     ["Connect Four", "🔵 [Java] Connect Four game played in console", "https://github.com/Megarion/Connect4-Java"],
     ["Data Generator", "📁 [Python] Program to generate files based on data and template", "https://github.com/Megarion/Data-Generator"],
-]
+];
 
+// Template
 let projectsListRep = ["#title", "#description", "#link"];
-
 let projectTemplate = '<div class="col-md"><a href="#link"><div><span><h4>#title</h4><p>#description</p></span></div></a></div>';
 
+// Generate
 function projectGen() {
     let content = '<div class="container">';
     for (let i = 0; i < projectsList.length; i++) {
@@ -28,7 +30,7 @@ function projectGen() {
         let projectEdit = "";
 
         if (i % 3 == 0) {
-            projectEdit+= '<div class="row">';
+            projectEdit += '<div class="row">';
         }
 
         projectEdit += projectTemplate;
