@@ -25,8 +25,10 @@ $(document).ready(function () {
     // Prepare
     $('#projects-element').hide();
 
-    // Generate
+    // Generate Projects
     $('#projects-display').html(projectGen());
+
+    // Generate Contacts
     $('#navbar-contact').html(contactGen());
     $('#home-contact').html(contactGenAlt());
 
