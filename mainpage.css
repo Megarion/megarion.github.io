@@ -6,6 +6,11 @@ body {
     background-color: #0d1117;
 }
 
+.sub {
+    font-size: small;
+    opacity: 0.25;
+}
+
 /* Navigation bar */
 #navbar {
     font-size: large;
@@ -86,7 +91,7 @@ body {
     padding-top: 55px;
 }
 
-#projects-display a div {
+.list a div {
     height: 215px;
     
     display: flex;
@@ -104,15 +109,15 @@ body {
     padding: 20px;
 }
 
-#projects-display a div:hover {
+.list a div:hover {
     background-color: #252d38;
 }
 
-#projects-display a {
+.list a {
     color: rgb(182, 182, 182);
 }
 
-#projects-title {
+.title {
     margin: 15px;
 }
 

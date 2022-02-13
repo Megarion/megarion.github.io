@@ -26,7 +26,9 @@ $(document).ready(function () {
     $('#projects-element').hide();
 
     // Generate Projects
+    $('#featured-display').html(featuredGen());
     $('#projects-display').html(projectGen());
+    $('#programs-display').html(programsGen());
 
     // Generate Contacts
     $('#navbar-contact').html(contactGen());
