@@ -12,6 +12,7 @@ let projectsList = [
 
 let gamesList = [
     ["Polygon Rush", "🔺 [One Minute Jam] Choosing the correct polygons with a time limit", "https://megarion.itch.io/polygon-rush"],
+    ["Prime Pong", "⚪ Panasonic game recreation which you choose prime numbers", "https://megarion.itch.io/prime-pong"],
     ["Hold Up", "🔼 [Winter Barjam 2021] Bird go brrr", "https://megarion.itch.io/hold-up"],
     ["Ocean Remotion", "🌊 [SeaJam] A game about cleaning up trash", "https://megarion.itch.io/ocean-remotion"],
     ["D-BUG", "🐛 [Game Off 2021] My debugger is console.log", "https://megarion.itch.io/d-bug"],
@@ -25,7 +26,7 @@ let programsList = [
 ];
 
 let featuredList = [
-    gamesList[0],
+    gamesList[0], gamesList[1],
 ]
 
 // Template
