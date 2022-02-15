@@ -28,6 +28,7 @@ $(document).ready(function () {
     // Generate Projects
     $('#featured-display').html(featuredGen());
     $('#projects-display').html(projectGen());
+    $('#games-display').html(gamesGen());
     $('#programs-display').html(programsGen());
 
     // Generate Contacts
