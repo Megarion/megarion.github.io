@@ -1,6 +1,5 @@
 // List
 let projectsList = [
-    
     ["Card Generator", "🎴 Website to generate Cards and share them", "https://megarion.github.io/Card-Generator/"],
     ["Aggressify", "😡 TURN TEXT INTO ANGRY MESSAGES!!!!", "https://megarion.github.io/Aggressify/"],
     ["ChromeDuck", "🦆 An useless Chrome extension that adds a duck at the bottom of your screen", "https://megarion.github.io/ChromeDuck"],
@@ -26,12 +25,12 @@ let programsList = [
 ];
 
 let featuredList = [
-    gamesList[0], gamesList[1],
+    gamesList[1], gamesList[0],
 ]
 
 // Template
 let projectsListRep = ["#title", "#description", "#link"];
-let projectTemplate = '<div class="col-md"><a href="#link"><div><span><h4>#title</h4><p>#description</p></span></div></a></div>';
+let projectTemplate = '<div class="col-md"><a href="#link" target="_blank"><div><span><h4>#title</h4><p>#description</p></span></div></a></div>';
 
 // Generate
 function projectGen() {
