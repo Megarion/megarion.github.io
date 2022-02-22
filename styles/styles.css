@@ -11,12 +11,32 @@ COLORS:
 }
 
 a {
+    transition: 0.25s ease-in-out;
+
     text-decoration: none;
     color: #7d89ff;
 }
 
 a:hover {
     color: #a8b0ff;
+}
+
+button {
+    transition: 0.3s ease-in-out;
+
+    background-color: #7d89ff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+}
+
+button:hover {
+    background-color: #a8b0ff;
 }
 
 body {

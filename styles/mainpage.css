@@ -1,6 +1,35 @@
 :root {
-    --navwidth: 25%;
-    --navwidth-small: 35%;
+    --navwidth: 30%;
+    --navwidth-small: 40%;
+
+    --tab-space: 20px;
+    --tab-hover: 10px;
+}
+
+@keyframes glide-right {
+    0% {
+        margin-right: 1000px;
+    }
+    
+    100% {
+        margin-right: 0px;
+    }
+}
+
+@keyframes glide-left {
+    100% {
+        margin-left: 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
 }
 
 #main {
@@ -26,28 +55,77 @@
 
 .nav-list {
     width: 80%;
-    font-size: larger;
+    font-size: large;
+
+    animation-name: glide-right;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
 
-.nav-title {
+.nav-title{
     text-align: center;
+    padding-top: 40px;
+}
+
+.nav-middle {
+    opacity: 0;
+
+    animation-name: fade-in;
+    animation-duration: 0.25s;
+    animation-delay: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.nav-footer {
+    text-align: center;
+    padding-top: 40px;
+
+    opacity: 0;
+
+    animation-name: fade-in;
+    animation-duration: 0.25s;
+    animation-delay: 1.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.nav-bottom {
+    text-align: center;
+    padding: 15px;
+    font-size: small;
+    opacity: 0.65;
+
+    opacity: 0;
+
+    animation-name: fade-in;
+    animation-duration: 0.25s;
+    animation-delay: 1.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
 
 .nav-thumbnail {
-    width: 200px;
-    height: 200px;
+    transition: 0.3s ease-in-out;
+
+    width: 210px;
+    height: 210px;
 
     border-radius: 100px;
 }
 
+.nav-thumbnail:hover {
+    transform: scale(1.1);
+}
+
 .nav-list a {
-    transition: 0.2s ease-in-out;
+    padding-left: var(--tab-space);
 
     filter: brightness(0.75);
 }
 
 .nav-list a:hover {
-    padding-left: 10px;
+    padding-left: calc(var(--tab-space) + var(--tab-hover));
     
     filter: brightness(1);
 }
@@ -59,9 +137,19 @@
 
     float: right;
     overflow: auto;
+
+    opacity: 0;
+
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+    animation-delay: 1.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
 
 .list img {
+    transition: 0.2s ease-in-out;
+
     width: 65px;
     height: 65px;
 
@@ -70,7 +158,11 @@
     display: inline-block;
 }
 
-@media screen and (max-width: 840px) {
+.list img:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 910px) {
     .nav {
         width: var(--navwidth-small);
     }
@@ -80,7 +172,7 @@
     }
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 640px) {
     .nav {
         display: none;
     }
