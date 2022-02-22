@@ -26,99 +26,62 @@
         gtag('config', 'G-TFLJKZZZVJ');
     </script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
     <!-- Scripts -->
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="scripts/project-gen.js"></script>
-    <script src="scripts/contact-gen.js"></script>
-    <script src="scripts/mainpage.js"></script>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/boostrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="mainpage.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mainpage.css">
+
+    <!-- Scripts -->
+    <script src="scripts/mainpage.js"></script>
+    <script src="scripts/contact-gen.js"></script>
+    <script src="scripts/project-gen.js"></script>
+    <script src="scripts/mainpage.js"></script>
+
     
     <link rel="icon" href="assets/favicon.ico" />
 </head>
 
 <!-- Website content -->
 <body>
-
-<!-- Navigation bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
-    <b style="margin-left: 10px;">Megarion</b>
-    <!-- Contacts -->
-    <div class="container-fluid">
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbar-contact">
-                <!-- Contacts will be generated here using JavaScript -->
-            </ul>
+<div id="main">
+    <div class="nav">
+        <div class="nav-list">
+            <div class="nav-title">
+                <img src="assets/github.png" class="nav-thumbnail">
+                <h1>Megarion</h1>
+            </div>
+            <a href="">Home</a><br>
+            <a href="">Projects</a><br>
+            <a href="">Contacts</a><br>
+            <a href="">Share</a><br>
         </div>
     </div>
-</nav>
+    <div class="content">
+        <div id="about">
+            <h1>About</h1>
+            <p>I like coding</p>
 
-<!-- Home screen -->
-<div id="home-element">
-    <div id="home-content">
-        <span><h1>Hello</h1></span>
-        <span><h3>I'm Megarion</h3></span>
-        <span><h4>I like coding</h4></span>
-        
-        <button id="projects-navi" type="button" class="btn btn-success">View projects</button>
+            <br>
 
-        <!-- Contacts (for smaller devices) -->
-        <div id="home-contact">
-            <!-- Contacts will be generated here using JavaScript -->
-        </div>
-        
-        <span><p>&copy; 2021-2022 Megarion</p></span>
-    </div>
-</div>
-
-<!-- Projects -->
-<div id="projects-element">
-    <div id="projects-content">
-    <button id="home-navi" type="button" class="btn btn-primary">Go back</button>
-    
-    <div id="projects-list">
-        <h1 class="title">Featured</h1>
-        <span class="sub">My least horrible projects</span><br>
-        <div>
-            <div id="featured-display" class="list">
-                <!-- Featured projects will be generated here using JavaScript -->
-            </div>
-        </div>
-
-        <br>
-
-        <h1 class="title">Projects</h1>
-        <span class="sub">The longer you scroll, the worse it gets</span><br>
-        <div>
-            <div id="projects-display" class="list">
-                <!-- Projects will be generated here using JavaScript -->
-            </div>
-        </div>
-
-        <h1 class="title">Games</h1>
-        <span class="sub">Pieces of programs you can run on your computer</span><br>
-        <div></div>
-            <div id="games-display" class="list">
-                <!-- Games will be generated here using JavaScript -->
-            </div>
-        </div>
-
-        <br>
-
-        <h1 id="projects-title">Programs</h1>
-        <span class="sub">Developer zone</span><br>
-        <div>
-            <div id="programs-display" class="list">
-                <!-- Programs will be generated here using JavaScript -->
+            <h2>Languages</h2>
+            <div class="list">
+                <img title="HTML" src="assets/lang/html.png">
+                <img title="CSS" src="assets/lang/css.png">
+                <img title="JavaScript" src="assets/lang/javascript.png">
+                <img title="TypeScript" src="assets/lang/typescript.png">
+                <img title="C++" src="assets/lang/cpp.png">
+                <img title="Java" src="assets/lang/java.png">
+                <img title="Python" src="assets/lang/python.png">
             </div>
         </div>
     </div>
 </div>
-
 </body>
 
 </html>

@@ -1,0 +1,43 @@
+/*
+COLORS:
+#d4d8ff | blue - white
+#e3e6ff | blue - white (brighter)
+#7d89ff | light blue
+#a8b0ff | light blue (brighter)
+*/
+
+* {
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+    color: #7d89ff;
+}
+
+a:hover {
+    color: #a8b0ff;
+}
+
+body {
+    background-color: #d4d8ff;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d4d8ff; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7d89ff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8d98ff; 
+}
