@@ -1,10 +1,5 @@
 # Portfolio
-Version 7.0
+Working on version 8.0
 
-## Tools used
-
-### Styles
-- [Bootstrap](https://getbootstrap.com/)
-
-### Scripts
-- [JQuery 3.6.0 (JS library)](https://jquery.com/)
+### Website
+Go to branch `gh-pages` to view the website code
