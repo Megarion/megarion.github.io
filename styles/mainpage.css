@@ -16,6 +16,16 @@
     }
 }
 
+@keyframes glide-down {
+    0% {
+        margin-top: -200px;
+    }
+    
+    100% {
+        margin-top: 0px;
+    }
+}
+
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -24,6 +34,94 @@
     100% {
         opacity: 1;
     }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+#popup {
+    height: 100vh; 
+    width: 100%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgb(0, 0, 0);
+
+    display: none;
+}
+
+#popupCenter {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+
+    height: 100vh; 
+    width: 100%; 
+}
+
+#popupContent {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+
+    position: block;
+
+    width: 50%;
+    height: 85vh;
+
+    border-radius: 10px;
+
+    background-color: #e3e6ff;
+}
+
+#popupImage {
+    max-width: 75%;
+    max-height: 30vh;
+    width: auto;
+    height: auto;
+}
+
+#popupContent span {
+    text-align: center;
+}
+
+#loading {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh; 
+    width: 100%; 
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 1001;
+
+    background-color: black;
+    color: white;
+}
+
+#loading span {
+    text-align: center;
+}
+
+.animationLoading {
+    animation-name: fade-out;
+    animation-duration: 0.5s;
+    animation-delay: 0.2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 
 #main {
@@ -40,6 +138,8 @@
     height: 100vh;
 
     float: left; 
+
+    z-index: 500;
 
     display: flex;
     align-items: center;
@@ -129,6 +229,36 @@
     filter: brightness(1);
 }
 
+.animation1 {
+    margin-top: -200px;
+
+    animation-name: glide-down;
+    animation-duration: 0.7s;
+    animation-delay: 1.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation2 {
+    opacity: 0;
+
+    animation-name: fade-in;
+    animation-duration: 0.4s;
+    animation-delay: 2.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation3 {
+    opacity: 0;
+
+    animation-name: fade-in;
+    animation-duration: 0.4s;
+    animation-delay: 2.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
 /* Main page styles */
 .content {
     width: calc(100% - var(--navwidth) - 20vh);
@@ -137,14 +267,6 @@
 
     float: right;
     overflow: auto;
-
-    opacity: 0;
-
-    animation-name: fade-in;
-    animation-duration: 0.5s;
-    animation-delay: 1.6s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
 }
 
 .list img {
@@ -153,17 +275,11 @@
     width: 65px;
     height: 65px;
 
-    margin: 5px;
-
-    display: inline-block;
+    margin: 7px;
 }
 
 .list img:hover {
     transform: scale(1.2);
-}
-
-#more {
-    display: none;
 }
 
 .small {
@@ -171,12 +287,64 @@
 }
 
 /* Project styles */
-.projectsList {
+.projectsList, .projectsListFeatured {
     text-align: center;
-    padding: 10px;
-    
+    padding: 20px;
+    margin-bottom: 20px;
+
+    display: inline-block;
 }
 
+.projectsDisplay {
+    text-align: center;
+}
+
+.projectsList a {
+    text-align: center;
+
+    color: black;
+
+    display: inline-block;
+
+    vertical-align: top;
+}
+
+.projectsList a div {
+    transition: 0.2s ease-in-out;
+
+    border: 1px solid rgba(0, 0, 0, 0.096);
+    background-color: #bec4ff;
+    border-radius: 5px;
+
+    margin: 30px;
+    padding: 20px;
+
+    width: 275px;
+    height: 160px;
+
+    box-shadow: 0px 0px 13px 4px rgb(145, 145, 145);
+}
+
+.projectsList a div:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
+.projectsListFeatured {
+    width: 60%;
+}
+
+.projectsListFeatured button {
+    border-radius: 200px;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.projectsListFeatured button:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive styles */
 @media screen and (max-width: 910px) {
     .nav {
         width: var(--navwidth-small);
@@ -185,9 +353,13 @@
     .content {
         width: calc(100% - var(--navwidth-small) - 20vh);
     }
+
+    .projectsListFeatured {
+        width: calc(100% - 10vh);
+    }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 750px) {
     .nav {
         display: none;
     }

@@ -25,5 +25,30 @@ let programsList = [
 ];
 
 let featuredList = [
-    projectsList, gamesList[0],
+    [toolsList[1], "assets/img/1.png"],
+    [toolsList[5], "assets/img/2.png"],
 ]
+
+function projectGen(list) {
+    let result = "";
+    for (let i = 0; i < list.length; i++) {
+        const item = list[i];
+        result+= `<a href="${
+            item[2]
+        }" target="_blank"><div><h2>${
+            item[0]
+        }</h2><p>${
+            item[1]
+        }</p></div></a>`;
+    }
+    return result;
+}
+
+function featuredGen(list) {
+    let result = "";
+    for (let i = 0; i < list.length; i++) {
+        const item = list[i];
+        result+= `<button onclick="showPopup('${item[0][0]}', '${item[0][1]}', '${item[1]}', '${item[0][2]}')">${item[0][0]}</button>`;
+    }
+    return result;
+}

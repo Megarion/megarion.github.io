@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta content="Megarion" property="og:title">
     <meta content="Portfolio" property="og:description">
-    <meta content="https://megarion.github.io/assets/github.png" property="og:image">
+    <meta content="https://megarion.github.io/assets/icon/github.png" property="og:image">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="content">
@@ -32,21 +32,46 @@
 
     <!-- Scripts -->
     <script src="scripts/mainpage.js"></script>
+    <script src="scripts/project-gen.js"></script>
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/mainpage.css">
     
-    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="icon" href="assets/icon/favicon.ico" />
 </head>
 
 <!-- Website content -->
 <body>
+
+<div id="popup">
+    <div id="popupCenter">
+        <div id="popupContent">
+            <span>
+                <h1 id="popupTitle"></h1>
+                <img id="popupImage" src="">
+                <br>
+                <p id="popupText"></p>
+                <br>
+                <button id="popupButton" onclick="">Go!</button>
+                <br><br>
+                <button class="small" onclick="hidePopup()">Close</button>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div id="loading">
+    <span>
+        <h1>Loading...</h1>
+    </span>
+</div>
+
 <div id="main">
     <div class="nav">
         <div class="nav-list">
             <div class="nav-title">
-                <img src="assets/github.png" class="nav-thumbnail">
+                <img src="assets/icon/github.png" class="nav-thumbnail">
                 <h1>Megarion</h1>
             </div>
             
@@ -54,7 +79,6 @@
                 <a href="javascript:tabSwitch('about')">Home</a><br>
                 <a href="javascript:tabSwitch('projects')">Projects</a><br>
                 <a href="javascript:tabSwitch('contacts')">Contacts</a><br>
-                <a href="javascript:tabSwitch('share')">Share</a><br>
             </div>
 
             <div class="nav-footer">
@@ -68,26 +92,30 @@
     </div>
     <div class="content">
         <div id="about">
-            <h1>Hi!</h1>
-            <p>I'm a developer and I like creating silly programs</p>
-            <p>I mostly make websites and games, sometimes music</p>
-
-            <br>
-
-            <h2 title="Sorted by Most Experience">Languages</h2>
-            <div class="list">
-                <img title="JavaScript" src="assets/lang/javascript.png">
-                <img title="C++" src="assets/lang/cpp.png">
-                <img title="TypeScript" src="assets/lang/typescript.png">
-                <img title="HTML" src="assets/lang/html.png">
-                <img title="CSS" src="assets/lang/css.png">
-                <img title="Python" src="assets/lang/python.png">
-                <img title="Java" src="assets/lang/java.png">
+            <h1 id="anim1">Hi!</h1>
+            <div id="anim2">
+                <p>I'm a developer and I like creating silly programs</p>
+                <p>I mostly make websites and games, sometimes music</p>
             </div>
 
             <br>
 
-            <button class="small" id="less" onclick="aboutExpand();">Show more</button>
+            <div id="anim3">
+                <h2 title="Sorted by Most Experience">Languages</h2>
+                <div class="list">
+                    <img title="JavaScript" src="assets/lang/javascript.png">
+                    <img title="C++" src="assets/lang/cpp.png">
+                    <img title="TypeScript" src="assets/lang/typescript.png">
+                    <img title="HTML" src="assets/lang/html.png">
+                    <img title="CSS" src="assets/lang/css.png">
+                    <img title="Python" src="assets/lang/python.png">
+                    <img title="Java" src="assets/lang/java.png">
+                </div>
+
+                <br>
+
+                <button class="small" id="less" onclick="aboutExpand();">Show more</button>
+            </div>
 
             <div id="more">
                 <h2>Frameworks</h2>
@@ -124,44 +152,42 @@
         <div id="projects">
             <h1>Projects</h1>
 
-            <div class="projectsList" id="featuredPL" title="Projects that I'm proud of">
+            <div class="projectsDisplay">
+                <h2>Featured</h2>
+                <div class="projectsListFeatured" id="featuredPL" title="Projects that I'm proud of"></div>
 
-            </div>
+                <br><br>
 
-            <button class="small" id="lessPL" onclick="projectExpand();" 
-                title="All of my projects, including experimental ones"
-            >Show all</button>
-
-            <div id="morePL">
-                <h1>Tools</h1>
-                <div class="projectsList" id="toolsPL">
-                    asdadasasdasd
+                <div id="lessPL">
+                    <button class="small" onclick="projectExpand();" 
+                        title="All of my projects, including experimental ones"
+                    >Show all</button>
                 </div>
 
-                <br>
+                <div id="morePL">
+                    <h3>Tools</h3>
+                    <div class="projectsList" id="toolsPL"></div>
+                    <br><br>
 
-                <h1></h1>
-                <div class="projectsList" id="gamesPL">
+                    <h3>Games</h3>
+                    <div class="projectsList" id="gamesPL"></div>
+                    <br><br>
 
+                    <h3>Programs</h3>
+                    <div class="projectsList" id="programsPL"></div>
+                    <br><br>
+
+                    <button class="small" onclick="projectCollapse()">Show less</button>
                 </div>
-
-                <div class="projectsList" id="programsPL">
-
-                </div>
-
-                <button class="small" onclick="projectCollapse()">Show less</button>
             </div>
         </div>
 
         <div id="contacts">
             <h1>Contacts</h1>
         </div>
-
-        <div id="share">
-            <h1>Share</h1>
-        </div>
     </div>
 </div>
+
 </body>
 
 </html>
