@@ -53,9 +53,7 @@
                 <br>
                 <p id="popupText"></p>
                 <br>
-                <button id="popupButton" onclick="">Go!</button>
-                <br><br>
-                <button class="small" onclick="hidePopup()">Close</button>
+                <button id="popupButton" class="small" onclick=""></button> <button class="small" onclick="hidePopup()">Close</button>
             </span>
         </div>
     </div>
@@ -69,23 +67,23 @@
 
 <div id="main">
     <div class="nav">
-        <div class="nav-list">
+        <div class="nav-list" id="navanim1">
             <div class="nav-title">
                 <img src="assets/icon/github.png" class="nav-thumbnail">
                 <h1>Megarion</h1>
             </div>
             
-            <div class="nav-middle">
+            <div class="nav-middle" id="navanim2">
                 <a href="javascript:tabSwitch('about')">Home</a><br>
                 <a href="javascript:tabSwitch('projects')">Projects</a><br>
                 <a href="javascript:tabSwitch('contacts')">Contacts</a><br>
             </div>
 
-            <div class="nav-footer">
+            <div class="nav-footer" id="navanim3">
                 <button onclick="window.open('https://github.com/Megarion/megarion.github.io/tree/gh-pages', '_blank');">Source Code</button>
             </div>
 
-            <div class="nav-bottom">
+            <div class="nav-bottom" id="navanim4">
                 &copy; 2021 - 2022 Megarion
             </div>
         </div>
@@ -147,13 +145,15 @@
 
                 <button class="small" onclick="aboutCollapse()">Show less</button>
             </div>
+
+            <br><br>
         </div>
 
         <div id="projects">
-            <h1>Projects</h1>
+            <h1 id="anim1PL">Projects</h1>
 
             <div class="projectsDisplay">
-                <h2>Featured</h2>
+                <h2 id="anim2PL">Featured</h2>
                 <div class="projectsListFeatured" id="featuredPL" title="Projects that I'm proud of"></div>
 
                 <br><br>
@@ -180,10 +180,101 @@
                     <button class="small" onclick="projectCollapse()">Show less</button>
                 </div>
             </div>
+
+            <br><br>
         </div>
 
         <div id="contacts">
-            <h1>Contacts</h1>
+            <h1 id="anim1CT">Contacts</h1>
+            <div id="contactList">
+                <h2 id="anim2CT">Commonly used</h2>
+                <div id="anim3CT">
+                    <div>
+                        <button 
+                            style="background-color: rgba(0, 0, 0, 0.733);"
+                            onclick="showPopup(
+                                'GitHub', 
+                                'Megarion', 
+                                'assets/tools/github.png', 
+                                'https://github.com/Megarion', 
+                                'open'
+                            )"
+                        >GitHub</button>
+                        <button 
+                            style="background-color: rgba(255, 24, 24, 0.733);" 
+                            onclick="showPopup(
+                                'YouTube', 
+                                'Megarion', 
+                                'assets/icon/youtube.png', 
+                                'https://www.youtube.com/channel/UCBrlr_nVSQ_4kZtsY58Q8wA', 
+                                'open'
+                            )"
+                        >YouTube</button>
+                        <button 
+                            style="background-color: rgba(125, 44, 255, 0.733);"
+                            onclick="showPopup(
+                                'Discord', 
+                                'Megarion#0892', 
+                                'assets/icon/discord.png', 
+                                'Megarion#0892', 
+                                'copy'
+                            )"
+                        >Discord</button>
+                    </div>
+                </div>
+                <br>
+                <div id="contactLess">
+                    <button class="small" onclick="contactExpand()">Show more</button>
+                </div>
+                <div id="contactMore" title="Uninteresting contacts">
+                    <h2>Inactive</h2>
+                    <div>
+                        <button 
+                            style="background-color: rgba(28, 191, 255, 0.733);"
+                            onclick="showPopup(
+                                'Twitter', 
+                                '@Megarionnn', 
+                                'assets/icon/twitter.png', 
+                                'https://twitter.com/Megarionnn', 
+                                'open'
+                            )"
+                        >Twitter</button>
+                        <button 
+                            style="background-color: rgba(255, 72, 0, 0.87);"
+                            onclick="showPopup(
+                                'Reddit', 
+                                'u/Megarionn', 
+                                'assets/icon/reddit.png', 
+                                'https://www.reddit.com/user/Megarionn', 
+                                'open'
+                            )"
+                        >Reddit</button>
+                        <button 
+                            style="background-color: rgba(255, 0, 76, 0.87);"
+                            onclick="showPopup(
+                                'Itch.io', 
+                                'Megarion', 
+                                'assets/icon/itchio.png', 
+                                'https://megarion.itch.io/', 
+                                'open'
+                            )"
+                        >Itch.io</button>
+                        <button 
+                            style="background-color: rgba(255, 97, 35, 0.795);"
+                            onclick="showPopup(
+                                'StackOverflow', 
+                                'Megarion', 
+                                'assets/tools/stack-overflow.png', 
+                                'https://stackoverflow.com/users/15978658/megarion', 
+                                'open'
+                            )"
+                        >StackOverflow</button>
+                    </div>
+                    <br>
+                    <button id="contactMore" class="small" onclick="contactCollapse()">Show less</button>
+                </div>
+                
+            </div>
         </div>
     </div>
 </div>

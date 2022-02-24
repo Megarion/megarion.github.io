@@ -48,7 +48,17 @@ function featuredGen(list) {
     let result = "";
     for (let i = 0; i < list.length; i++) {
         const item = list[i];
-        result+= `<button onclick="showPopup('${item[0][0]}', '${item[0][1]}', '${item[1]}', '${item[0][2]}')">${item[0][0]}</button>`;
+        result+= `<button onclick="showPopup('${
+            item[0][0]
+        }', '${
+            item[0][1]
+        }', '${
+            item[1]
+        }', '${
+            item[0][2]
+        }', 'open')">${
+            item[0][0]
+        }</button>`;
     }
     return result;
 }
