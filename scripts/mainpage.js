@@ -101,7 +101,7 @@ function tabSwitch(tab){
         }, 2250);
     }
 
-    if (!(tab == 'projects')) {
+    if (!(tab == 'projects') && visitProjects) {
         removeAnimProjects(false);
     }
 
@@ -113,7 +113,7 @@ function tabSwitch(tab){
         }, 2250);
     }
 
-    if (!(tab == 'contacts')) {
+    if (!(tab == 'contacts') && visitContacts) {
         removeAnimContacts(false);
     }
 
