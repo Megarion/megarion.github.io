@@ -1,19 +1,19 @@
 // List
-let projectsList = [
-    ["Card Generator", "🎴 Website to generate Cards and share them", "https://megarion.github.io/Card-Generator/"],
+let toolsList = [
+    ["NoCopy", "🈺 Text converter that change normal characters to look-alike Unicode characters that behaves differently", "https://megarion.github.io/NOCOPY"],
     ["Aggressify", "😡 TURN TEXT INTO ANGRY MESSAGES!!!!", "https://megarion.github.io/Aggressify/"],
+    ["Card Generator", "🎴 Website to generate Cards and share them", "https://megarion.github.io/Card-Generator/"],
     ["ChromeDuck", "🦆 An useless Chrome extension that adds a duck at the bottom of your screen", "https://megarion.github.io/ChromeDuck"],
     ["Website Fetcher", "🔭 Program to fetch the content of an URL (links, images, videos...)", "https://megarion.github.io/Website-Fetcher"],
-    ["NoCopy", "🈺 Text converter that change normal characters to look-alike Unicode characters that behaves differently", "https://megarion.github.io/NOCOPY"],
     ["MoistImg", "A (joke) Chrome extension that replace all images with MoistCr1TiKaL", "https://megarion.github.io/MoistImg"],
     ["RediRoll", "A Chrome extension that redirects to the Rick Roll everytime the user clicks a link", "https://megarion.github.io/RediRoll"],
 ];
 
 let gamesList = [
-    ["Polygon Rush", "🔺 [One Minute Jam] Choosing the correct polygons with a time limit", "https://megarion.itch.io/polygon-rush"],
-    ["Prime Pong", "⚪ Panasonic game recreation which you choose prime numbers", "https://megarion.itch.io/prime-pong"],
-    ["Hold Up", "🔼 [Winter Barjam 2021] Bird go brrr", "https://megarion.itch.io/hold-up"],
+    ["Polygon Rush", "🔺 Game submission for One Minute Jam which you select polygons", "https://megarion.itch.io/polygon-rush"],
     ["Ocean Remotion", "🌊 [SeaJam] A game about cleaning up trash", "https://megarion.itch.io/ocean-remotion"],
+    ["Hold Up", "🔼 [Winter Barjam 2021] Bird go brrr", "https://megarion.itch.io/hold-up"],
+    ["Prime Pong", "⚪ Panasonic game recreation", "https://megarion.itch.io/prime-pong"],
     ["D-BUG", "🐛 [Game Off 2021] My debugger is console.log", "https://megarion.itch.io/d-bug"],
 ];
 
@@ -25,114 +25,40 @@ let programsList = [
 ];
 
 let featuredList = [
-    gamesList[1], gamesList[0],
+    [toolsList[1], "assets/img/1.png"],
+    [toolsList[5], "assets/img/2.png"],
 ]
 
-// Template
-let projectsListRep = ["#title", "#description", "#link"];
-let projectTemplate = '<div class="col-md"><a href="#link" target="_blank"><div><span><h4>#title</h4><p>#description</p></span></div></a></div>';
-
-// Generate
-function projectGen() {
-    let content = '<div class="container">';
-    for (let i = 0; i < projectsList.length; i++) {
-        let projectSel = projectsList[i];
-
-        let projectEdit = "";
-
-        if (i % 3 == 0) {
-            projectEdit += '<div class="row">';
-        }
-
-        projectEdit += projectTemplate;
-        for (let j = 0; j < projectsListRep.length; j++) {
-            let re = new RegExp(projectsListRep[j], 'g');
-            projectEdit = projectEdit.replace(re, projectSel[j]);
-        }
-
-        if (i % 3 == 2 || i == projectsList.length - 1) {
-            projectEdit += '</div>';
-        }
-        content += projectEdit;
+function projectGen(list) {
+    let result = "";
+    for (let i = 0; i < list.length; i++) {
+        const item = list[i];
+        result+= `<a href="${
+            item[2]
+        }" target="_blank"><div><h2>${
+            item[0]
+        }</h2><p>${
+            item[1]
+        }</p></div></a>`;
     }
-    content += '</div>';
-    return content;
+    return result;
 }
 
-function gamesGen() {
-    let content = '<div class="container">';
-    for (let i = 0; i < gamesList.length; i++) {
-        let projectSel = gamesList[i];
-
-        let projectEdit = "";
-
-        if (i % 3 == 0) {
-            projectEdit += '<div class="row">';
-        }
-
-        projectEdit += projectTemplate;
-        for (let j = 0; j < projectsListRep.length; j++) {
-            let re = new RegExp(projectsListRep[j], 'g');
-            projectEdit = projectEdit.replace(re, projectSel[j]);
-        }
-
-        if (i % 3 == 2 || i == gamesList.length - 1) {
-            projectEdit += '</div>';
-        }
-        content += projectEdit;
+function featuredGen(list) {
+    let result = "";
+    for (let i = 0; i < list.length; i++) {
+        const item = list[i];
+        result+= `<button onclick="showPopup('${
+            item[0][0]
+        }', '${
+            item[0][1]
+        }', '${
+            item[1]
+        }', '${
+            item[0][2]
+        }', 'open')">${
+            item[0][0]
+        }</button>`;
     }
-    content += '</div>';
-    return content;
-}
-
-function programsGen() {
-    let content = '<div class="container">';
-    for (let i = 0; i < programsList.length; i++) {
-        let projectSel = programsList[i];
-
-        let projectEdit = "";
-
-        if (i % 3 == 0) {
-            projectEdit += '<div class="row">';
-        }
-
-        projectEdit += projectTemplate;
-        for (let j = 0; j < projectsListRep.length; j++) {
-            let re = new RegExp(projectsListRep[j], 'g');
-            projectEdit = projectEdit.replace(re, projectSel[j]);
-        }
-
-        if (i % 3 == 2 || i == programsList.length - 1) {
-            projectEdit += '</div>';
-        }
-        content += projectEdit;
-    }
-    content += '</div>';
-    return content;
-}
-
-function featuredGen() {
-    let content = '<div class="container">';
-    for (let i = 0; i < featuredList.length; i++) {
-        let projectSel = featuredList[i];
-
-        let projectEdit = "";
-
-        if (i % 3 == 0) {
-            projectEdit += '<div class="row">';
-        }
-
-        projectEdit += projectTemplate;
-        for (let j = 0; j < projectsListRep.length; j++) {
-            let re = new RegExp(projectsListRep[j], 'g');
-            projectEdit = projectEdit.replace(re, projectSel[j]);
-        }
-
-        if (i % 3 == 2 || i == featuredList.length - 1) {
-            projectEdit += '</div>';
-        }
-        content += projectEdit;
-    }
-    content += '</div>';
-    return content;
+    return result;
 }
