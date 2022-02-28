@@ -178,7 +178,7 @@ window.addEventListener("load", () => {
     // Items
     gID('toolsPL').innerHTML = projectGen(toolsList);
     gID('gamesPL').innerHTML = projectGen(gamesList);
-    gID('programsPL').innerHTML = projectGen(programsList);
+    // gID('programsPL').innerHTML = projectGen(programsList);
     gID('featuredPL').innerHTML = featuredGen(featuredList);
 
     gID('loading').classList.add("animationLoading");
