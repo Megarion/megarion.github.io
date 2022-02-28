@@ -77,7 +77,7 @@
             </div>
 
             <div class="nav-footer" id="navanim3">
-                <button onclick="window.open('https://github.com/Megarion/megarion.github.io/tree/gh-pages', '_blank');">Source Code</button>
+                <button onclick="window.open('https://github.com/Megarion/megarion.github.io/', '_blank');">Source Code</button>
             </div>
 
             <div class="nav-bottom" id="navanim4">
@@ -86,67 +86,15 @@
         </div>
     </div>
     <div class="content">
-        <div id="about">
+        <div id="about" class="tab">
             <h1 id="anim1">Hi!</h1>
             <div id="anim2">
                 <p>I'm a developer and I like creating silly programs</p>
                 <p>I mostly make websites and games, sometimes music</p>
             </div>
-
-            <br>
-
-            <div id="anim3">
-                <h2 title="Sorted by Most Experience">Languages</h2>
-                <div class="list">
-                    <img title="JavaScript" src="assets/lang/javascript.png">
-                    <img title="C++" src="assets/lang/cpp.png">
-                    <img title="TypeScript" src="assets/lang/typescript.png">
-                    <img title="HTML" src="assets/lang/html.png">
-                    <img title="CSS" src="assets/lang/css.png">
-                    <img title="Python" src="assets/lang/python.png">
-                    <img title="Java" src="assets/lang/java.png">
-                </div>
-
-                <br>
-
-                <button class="small" id="less" onclick="aboutExpand();">Show more</button>
-            </div>
-
-            <div id="more">
-                <h2>Frameworks</h2>
-                <div class="list">
-                    <img title="JQuery" src="assets/lib/jquery.png">
-                    <img title="NodeJS" src="assets/lib/nodejs.png">
-                    <img title="Raylib" src="assets/lib/raylib.png">
-                    <img title="SFML" src="assets/lib/sfml.png">
-                </div>
-
-                <br>
-
-                <h2>Tools</h2>
-                <div class="list">
-                    <img title="GitHub" src="assets/tools/github.png">
-                    <img title="Stack Overflow" src="assets/tools/stack-overflow.png">
-                </div>
-
-                <br>
-
-                <h2>Softwares</h2>
-                <div class="list">
-                    <img title="VSCode" src="assets/software/vscode.png">
-                    <img title="GitHub Desktop" src="assets/software/github-desktop.png">
-                    <img title="FL Studio" src="assets/software/flstudio.png">
-                </div>
-
-                <br>
-
-                <button class="small" onclick="aboutCollapse()">Show less</button>
-            </div>
-
-            <br><br>
         </div>
 
-        <div id="projects">
+        <div id="projects" class="tab">
             <h1 id="anim1PL">Projects</h1>
 
             <div class="projectsDisplay">
@@ -177,11 +125,9 @@
                     <button class="small" onclick="projectCollapse()">Show less</button>
                 </div>
             </div>
-
-            <br><br>
         </div>
 
-        <div id="contacts">
+        <div id="contacts" class="tab">
             <h1 id="anim1CT">Contacts</h1>
             <div id="contactList">
                 <h2 id="anim2CT">Commonly used</h2>
@@ -217,15 +163,6 @@
                                 'copy'
                             )"
                         >Discord</button>
-                    </div>
-                </div>
-                <br>
-                <div id="contactLess">
-                    <button class="small" onclick="contactExpand()">Show more</button>
-                </div>
-                <div id="contactMore" title="Uninteresting contacts">
-                    <h2>Inactive</h2>
-                    <div>
                         <button 
                             style="background-color: rgba(28, 191, 255, 0.733);"
                             onclick="showPopup(
@@ -237,40 +174,17 @@
                             )"
                         >Twitter</button>
                         <button 
-                            style="background-color: rgba(255, 72, 0, 0.87);"
+                            style="background-color: rgba(70, 156, 0, 0.897); font-size: medium;"
                             onclick="showPopup(
-                                'Reddit', 
-                                'u/Megarionn', 
-                                'assets/icon/reddit.png', 
-                                'https://www.reddit.com/user/Megarionn', 
+                                'Geometry Dash', 
+                                'Megarionn', 
+                                'assets/icon/gd.png', 
+                                'https://gdbrowser.com/u/megarionn', 
                                 'open'
                             )"
-                        >Reddit</button>
-                        <button 
-                            style="background-color: rgba(255, 0, 76, 0.87);"
-                            onclick="showPopup(
-                                'Itch.io', 
-                                'Megarion', 
-                                'assets/icon/itchio.png', 
-                                'https://megarion.itch.io/', 
-                                'open'
-                            )"
-                        >Itch.io</button>
-                        <button 
-                            style="background-color: rgba(255, 97, 35, 0.795);"
-                            onclick="showPopup(
-                                'StackOverflow', 
-                                'Megarion', 
-                                'assets/tools/stack-overflow.png', 
-                                'https://stackoverflow.com/users/15978658/megarion', 
-                                'open'
-                            )"
-                        >StackOverflow</button>
+                        >Geometry Dash</button>
                     </div>
-                    <br>
-                    <button id="contactMore" class="small" onclick="contactCollapse()">Show less</button>
                 </div>
-                
             </div>
         </div>
     </div>

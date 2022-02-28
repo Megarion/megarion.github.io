@@ -482,6 +482,10 @@
     #popupContent {
         width: 80%;
     }
+
+    .tab {
+        padding: 40px 0px;
+    }
 }
 
 @media screen and (max-width: 500px) {

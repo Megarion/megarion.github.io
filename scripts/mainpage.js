@@ -28,13 +28,11 @@ function hideAllTabs(){
 function addAnimAbout() {
     gID('anim1').classList.add("animation1");
     gID('anim2').classList.add("animation2");
-    gID('anim3').classList.add("animation3");
 }
 
 function removeAnimAbout() {
     gID('anim1').classList.remove("animation1");
     gID('anim2').classList.remove("animation2");
-    gID('anim3').classList.remove("animation3");
 }
 
 function addAnimProjects(){
@@ -58,7 +56,6 @@ function addAnimContacts(){
     gID('anim1CT').classList.add("animation4");
     gID('anim2CT').classList.add("animation5");
     gID('anim3CT').classList.add("animation6");
-    gID('contactLess').classList.add("animation7");
 }
 
 function removeAnimContacts(patch){
@@ -68,7 +65,6 @@ function removeAnimContacts(patch){
 
     gID('anim2CT').classList.remove("animation5");
     gID('anim3CT').classList.remove("animation6");
-    gID('contactLess').classList.remove("animation7");
 }
 
 function addAnimNav() {
@@ -150,21 +146,6 @@ function projectCollapse(){
     show(gID('lessPL'));
 }
 
-function contactHidden(){
-    hide(gID('contactMore'));
-    hide(gID('contactLess'));
-}
-
-function contactExpand(){
-    contactHidden();
-    show(gID('contactMore'));
-}
-
-function contactCollapse(){
-    contactHidden();
-    show(gID('contactLess'));
-}
-
 function showPopup(title, description, image, input, type){
     gID('popupTitle').innerText = title;
     gID('popupText').innerText = description;
@@ -183,7 +164,6 @@ function showPopup(title, description, image, input, type){
     setTimeout(() => {
         show(gID('popup'));
     }, 10);
-    
 }
 
 function hidePopup() {
@@ -193,9 +173,7 @@ function hidePopup() {
 // Main code
 window.addEventListener("load", () => {
     // Preparation
-    hide(gID('more'));
     hide(gID('morePL'));
-    hide(gID('contactMore'));
 
     // Items
     gID('toolsPL').innerHTML = projectGen(toolsList);
