@@ -16,7 +16,7 @@ let gamesList = [
 
 let featuredList = [
     [toolsList[1], "assets/img/1.png"],
-    [toolsList[5], "assets/img/2.png"],
+    [toolsList[4], "assets/img/2.png"],
 ]
 
 function projectGen(list) {
