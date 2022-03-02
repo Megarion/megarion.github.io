@@ -28,11 +28,13 @@ function hideAllTabs(){
 function addAnimAbout() {
     gID('anim1').classList.add("animation1");
     gID('anim2').classList.add("animation2");
+    gID('anim3').classList.add("animation3");
 }
 
 function removeAnimAbout() {
     gID('anim1').classList.remove("animation1");
     gID('anim2').classList.remove("animation2");
+    gID('anim3').classList.remove("animation3");
 }
 
 function addAnimProjects(){
