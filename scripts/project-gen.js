@@ -1,6 +1,6 @@
 // List
 let toolsList = [
-    ["Neighborhood Simulator", "Visuals math project", "https://megarion.github.io/neighbors"],
+    ["Neighborhood Simulator", "Visual math project", "https://megarion.github.io/neighbors"],
     ["NoCopy", "Text converter that change normal characters to look-alike Unicode characters that behaves differently", "https://megarion.github.io/TextTools/NOCOPY"],
     ["Aggressify", "😡 TURN TEXT INTO ANGRY MESSAGES!!!!", "https://megarion.github.io/TextTools/Aggressify"],
     ["ChromeDuck", "🦆 An useless Chrome extension that adds a duck at the bottom of your screen", "https://megarion.github.io/ChromeDuck"],
