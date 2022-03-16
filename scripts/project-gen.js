@@ -1,22 +1,23 @@
 // List
 let toolsList = [
-    ["NoCopy", "🈺 Text converter that change normal characters to look-alike Unicode characters that behaves differently", "https://megarion.github.io/TextTools/NOCOPY"],
+    ["Neighborhood Simulator", "Visuals math project", "https://megarion.github.io/neighbors"],
+    ["NoCopy", "Text converter that change normal characters to look-alike Unicode characters that behaves differently", "https://megarion.github.io/TextTools/NOCOPY"],
     ["Aggressify", "😡 TURN TEXT INTO ANGRY MESSAGES!!!!", "https://megarion.github.io/TextTools/Aggressify"],
     ["ChromeDuck", "🦆 An useless Chrome extension that adds a duck at the bottom of your screen", "https://megarion.github.io/ChromeDuck"],
     ["MoistImg", "A (joke) Chrome extension that replace all images with MoistCr1TiKaL", "https://megarion.github.io/MoistImg"],
     ["RediRoll", "A Chrome extension that redirects to the Rick Roll everytime the user clicks a link", "https://megarion.github.io/RediRoll"],
 ];
 
-let gamesList = [
-    ["Polygon Rush", "🔺 Game submission for One Minute Jam which you select polygons", "https://megarion.itch.io/polygon-rush"],
-];
+// let gamesList = [
+// ];
 
 // let programsList = [
 // ];
 
 let featuredList = [
-    [toolsList[1], "assets/img/1.png"],
-    [toolsList[3], "assets/img/2.png"],
+    [toolsList[0], "assets/img/3.png"],
+    [toolsList[2], "assets/img/1.png"],
+    [toolsList[4], "assets/img/2.png"],
 ]
 
 function projectGen(list) {
