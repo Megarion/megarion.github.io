@@ -41,9 +41,9 @@ function replaceAll(s, search, replace) {
 }
 
 let projects = [
-    new Item("Neighborhood Simulator", "Visual math project", "https://megarion.github.io/neighbors/", "images/2.png"),
+    new Item("DemonlistBot", "Utility bot to fetch the Geometry Dash Pointercrate Demonlist information", "https://megarion.github.io/DemonlistBot/", "https://megarion.github.io/DemonlistBot/assets/screenshot001.png"),
     new Item("Aggressify", "Turn text into angry messages", "https://megarion.github.io/TextTools/Aggressify/", "images/1.png"),
-    new Item("DemonlistBot", "Utility bot to fetch the Geometry Dash Pointercrate Demonlist information", "https://megarion.github.io/DemonlistBot/", "https://megarion.github.io/DemonlistBot/assets/screenshot001.png")
+    new Item("Neighborhood Simulator", "Visual math project", "https://megarion.github.io/neighbors/", "images/2.png"),
 ];
 
 let template = `
