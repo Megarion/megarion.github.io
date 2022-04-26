@@ -3325,7 +3325,7 @@ input, select, textarea {
 }
 
 .popup-content {
-	width: 980px;
+	width: 950px;
 	height: 500px;
 
 	background-color: white;
@@ -3353,6 +3353,10 @@ input, select, textarea {
 /* Medium */
 
 	@media screen and (max-width: 980px) {
+		#popup {
+			z-index: -100;
+			opacity: 0;
+		}
 
 		/* List */
 
