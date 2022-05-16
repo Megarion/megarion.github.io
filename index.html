@@ -1,140 +1,96 @@
-<!DOCTYPE HTML>
-<!--
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Megarion</title>
-		<meta charset="UTF-8">
-		<meta content="Megarion" property="og:title">
-		<meta content="Portfolio" property="og:description">
-		<meta content="https://megarion.github.io/assets/icon/github.png" property="og:image">
-	
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="description" content="content">
-		<meta name="viewport"
-			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	
-		<meta name="google-site-verification" content="ByvRA8GEY25q07WVULyOB1i5h1h9A211VzuGCIB0V9Q" />
-	
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TFLJKZZZVJ"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() { dataLayer.push(arguments); }
-			gtag('js', new Date());
-	
-			gtag('config', 'G-TFLJKZZZVJ');
-		</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Megarion</title>
+    <meta charset="UTF-8">
+    <meta content="Megarion" property="og:title">
+    <meta content="Portfolio" property="og:description">
+    <meta content="./images/favicon.png" property="og:image">
 
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="content">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-		<link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <meta name="google-site-verification" content="ByvRA8GEY25q07WVULyOB1i5h1h9A211VzuGCIB0V9Q" />
 
-		<style>
-			/* ===== Scrollbar CSS ===== */
-			/* Firefox */
-			* {
-				scrollbar-width: auto;
-				scrollbar-color: #9b9b9b #ffffff;
-			}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFLJKZZZVJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-			/* Chrome, Edge, and Safari */
-			*::-webkit-scrollbar {
-				width: 10px;
-			}
+        gtag('config', 'G-TFLJKZZZVJ');
+    </script>
 
-			*::-webkit-scrollbar-track {
-				background: #ffffff;
-			}
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/index.css" />
 
-			*::-webkit-scrollbar-thumb {
-				background-color: #9b9b9b;
-				border-radius: 10px;
-				border: 3px solid #ffffff;
-			}
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
-			*::-webkit-scrollbar-thumb:hover {
-				background-color: #7c7c7c;
-				border: 2px solid #ffffff;
-			}
-		</style>
-	</head>
-	<body class="is-preload">
-		<!-- Absolute -->
-		<div id="popup">
-			<div class="popup-content">
-				<div class="thumb">
-					<img src="" id="popup-image">
-				</div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="main">
+    <div id="banner" class="head">
+        <span style="text-align: center">
+            <h1>Megarion</h1>
+            <span id="sub">
+                <a href="https://github.com/Megarion" target="_blank">GitHub</a>
+                <a href="https://www.youtube.com/channel/UCBrlr_nVSQ_4kZtsY58Q8wA" target="_blank">YouTube</a>
+            </span>
+        </span>
+    </div>
 
-				<div class="info">
-					<h2 id="popup-name"></h2>
-					<p id="popup-description"></p>
-					<p><b>Technologies: </b><span id="popup-details"></span></p>
-					<p><b>Tags: </b><span id="popup-tags"></span></p>
-				</div>
+    <div id="content">
+        <h1>Projects</h1>
+        <span class="line"></span>
+        <div id="projects">
+        </div>
+    </div>
 
-				<div class="sub">
-					<ul class="actions special">
-						<li><a id="popup-link" href="" class="button" target="_blank">Go</a></li>
-					</ul>
-				</div>
+    <div id="banner" class="head">
+        <span style="text-align: center">
+            <p>&copy; Megarion 2021-2022</p>
+        </span>
+    </div>
+</div>
 
-				<div class="corner">
-					<span class="icon solid fa-times" id="popup-close" style="cursor: pointer"></span>
-				</div>
-			</div>
-		</div>
+<script>
+    let projects = document.getElementById("projects");
 
-		<!-- Header -->
-		<section id="header">
-			<div class="inner">
-				<span class="icon solid major fa-code"></span>
-				<h1>Megarion</h1>
-				<ul class="actions special">
-					<li><a href="#one" class="button scrolly">Projects</a></li>
-				</ul>
-			</div>
-		</section>
+    const getJSON = async url => {
+        try {
+            const response = await fetch(url);
+            if(!response.ok) {
+                throw new Error(response.statusText);
+            }
+            const data = await response.json();
+            return data;
+        } catch(error) {
+            return error;
+        }
+    }
 
-		<!-- Main -->
-		<section id="one" class="main style1 special">
-			<div class="container">
-				<header class="major">
-					<h2>Projects</h2>
-				</header>
-				<div id="pList">
-					<!-- Generated by Script -->
-				</div>
-			</div>
-		</section>
+    getJSON("./data/projects.json").then(data => {
+        console.log(data);
+        let html = "";
+        for (let i = 0; i < data.length; i++) {
+            html+=`
+            <div class="item">
+                <img src="${data[i].img}">
+                <h2>${data[i].name}</h2>
+                <p>${data[i].description}</p>
+                <button onclick="window.open(${data[i].link})">Go</button>
+            </div>
+            `
+        }
 
-		<!-- Footer -->
-		<section id="footer">
-			<ul class="icons">
-				<li><a href="https://www.youtube.com/channel/UCBrlr_nVSQ_4kZtsY58Q8wA" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
-				<li><a href="https://github.com/Megarion" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-			</ul>
-			<br>
-			<a href="unlist.html">???</a>
-			<ul class="copyright">
-				<li>&copy; Megarion 2021-2022</li>
-			</ul>
-		</section>
-
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-
-		<script src="script.js"></script>
-
-	</body>
+        projects.innerHTML = html;
+    });
+</script>
+</body>
 </html>

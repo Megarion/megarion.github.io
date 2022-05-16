@@ -1,0 +1,57 @@
+:root {
+    --banner-height: 250px;
+}
+
+#main {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+#banner {
+    width: 100%;
+    
+    height: var(--banner-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    font-size: x-large;
+
+    -webkit-box-shadow: 0px 0px 14px 1px #000000; 
+    box-shadow: 0px 0px 14px 1px #000000;
+}
+
+#sub a {
+    margin: 10px;
+    color: var(--secondary-color);
+}
+
+#content {
+    width: 100%;
+    padding: 25px 0px;
+    text-align: center;
+
+    font-size: larger;
+}
+
+.item {
+    padding: 40px;
+    font-size: large;
+}
+
+.item img {
+    object-fit: cover;
+    width: 50vw;
+    height: 300px;
+
+    margin: 25px;
+
+    -webkit-box-shadow: 4px 4px 9px 0px #000000; 
+    box-shadow: 4px 4px 9px 0px #000000;
+}
+
+.item button {
+    margin: 10px;
+}
