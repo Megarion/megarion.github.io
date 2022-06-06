@@ -49,17 +49,26 @@ button {
     font-weight: bolder;
     font-size: large;
     transition: 0.4s ease-in-out;
+    cursor: pointer;
 }
 
 button:hover {
     filter: brightness(1.2);
+    transform: scale(1.05);
 }
 
-/* ===== Scrollbar CSS ===== */
-/* Firefox */
 * {
+    /* Firefox */
     scrollbar-width: auto;
     scrollbar-color: var(--main-color) var(--bg-col);
+
+    /* ===== Unselectable CSS ===== */
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+    transition: 0.2s ease-in-out;
 }
 
 /* Chrome, Edge, and Safari */
@@ -78,6 +87,6 @@ button:hover {
 }
 
 *::-webkit-scrollbar-thumb:hover {
-    background-color: #7c7c7c;
+    background-color: var(--main-color);
     border: 2px solid var(--bg-col);
 }
