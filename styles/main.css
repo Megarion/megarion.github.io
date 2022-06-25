@@ -58,6 +58,8 @@ button:hover {
 }
 
 * {
+    scroll-behavior: smooth;
+
     /* Firefox */
     scrollbar-width: auto;
     scrollbar-color: var(--main-color) var(--bg-col);

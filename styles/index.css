@@ -46,7 +46,7 @@
     width: 50vw;
     height: 300px;
 
-    margin: 25px;
+    margin: 25px 0px;
 
     -webkit-box-shadow: 4px 4px 9px 0px #000000; 
     box-shadow: 4px 4px 9px 0px #000000;
@@ -58,4 +58,16 @@
 
 .item button {
     margin: 10px;
+}
+
+@media screen and (max-width: 650px) {
+    .item img {
+        width: 75vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .item img {
+        height: 200px;
+    }
 }
