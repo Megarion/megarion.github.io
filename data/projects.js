@@ -42,12 +42,12 @@ let projects = [
         [new LINK("https://megarion.github.io/TextTools/Aggressify/", "Website")],
         "images/1.png"
     ),
-    new ITEM(
-        "Neighbor Simulator",
-        "Visual math simulation of a neighborhood",
-        [new LINK("https://megarion.github.io/neighbors/", "Website")],
-        "images/2.png"
-    ),
+    // new ITEM(
+    //     "Neighbor Simulator",
+    //     "Visual math simulation of a neighborhood",
+    //     [new LINK("https://megarion.github.io/neighbors/", "Website")],
+    //     "images/2.png"
+    // ),
 ];
 
 export {projects};

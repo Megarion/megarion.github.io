@@ -37,13 +37,17 @@
 }
 
 .item {
-    padding: 40px;
+    padding: 30px;
     font-size: large;
+    width: 40vw;
+
+    display: inline-block;
+    vertical-align: top;
 }
 
 .item img {
     object-fit: cover;
-    width: 50vw;
+    width: 40vw;
     height: 300px;
 
     margin: 25px 0px;
@@ -58,6 +62,10 @@
 
 .item button {
     margin: 10px;
+}
+
+.item p {
+    height: 50px;
 }
 
 @media screen and (max-width: 650px) {
