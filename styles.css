@@ -1,0 +1,53 @@
+@font-face {
+    font-family: config;
+    src: url(assets/cr.ttf);
+}
+
+html {
+    --text-color: #fff;
+    --special-color: rgb(45,105,253)
+}
+
+body {
+    font-family: config;
+    font-weight: 500;
+}
+
+#bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(34,172,195);
+    background: -moz-linear-gradient(0deg, rgba(34,172,195,1) 0%, rgba(45,105,253,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(34,172,195,1) 0%, rgba(45,105,253,1) 100%);
+    background: linear-gradient(0deg, rgba(34,172,195,1) 0%, rgba(45,105,253,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22acc3",endColorstr="#2d69fd",GradientType=1);
+    z-index: -1000;
+    position: fixed;
+}
+
+#content {
+    font-size: 2vw;
+    width: 60vw;
+    margin: 8vh;
+    background-color: #333;
+    padding: 4vw;
+    scroll-behavior: smooth;
+    color: var(--text-color);
+}
+
+a {
+    color: var(--special-color);
+    transition: 0.2s ease-in-out;
+}
+
+a:hover {
+    filter: brightness(1.25);
+}
+
+#top {
+    font-size: 3vw;
+    width: 100%;
+    margin: 4vh 0;
+}
