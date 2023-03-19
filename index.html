@@ -5,7 +5,7 @@
     <title>Megarion</title>
     <meta charset="UTF-8">
     <meta content="Megarion" property="og:title">
-    <meta content="Portfolio" property="og:description">
+    <meta content="random stuff" property="og:description">
     <meta content="/img/favicon.png" property="og:image">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -26,7 +26,6 @@
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-dark.min.css" integrity="sha512-USRvpT7dJFA7mrRx4+esmy+2mYr8vlgmDLFpkNeVEd+D5CgQvULKPYVnDV97Ywfek+e//HdSA0NlaPe4oqkwfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <style>
         body {
@@ -54,12 +53,19 @@
     <article class="markdown-body">
     <h1>Megarion</h1>
 
+    <input type="checkbox" id="checkSub"> <i>Enable sub-links (for quicker navigation)</i>
     <h3>Projects</h3>
     <ul>
-        <li><a href="https://megarion.github.io/DemonlistBot/" target="_blank">DemonlistBot</a> <i>(Deprecated)</i> Discord bot to fetch the <b>Geometry Dash</b> Demonlist</li>
-        <li><a href="https://megarion.github.io/TextTools/Aggressify/" target="_blank">Aggressify</a> Turn text into angry messages</li>
+        <li><a href="https://megarion.github.io/DemonlistBot/" target="_blank">DemonlistBot</a> <i>(Deprecated)</i> Discord bot to fetch the Geometry Dash Demonlist</li>
+        <li>
+            <a href="https://megarion.github.io/TextTools/" target="_blank">TextTools</a> A collection of text converters
+            <ul id="subLink">
+                <li><a href="https://megarion.github.io/TextTools/Aggressify/" target="_blank">Aggressify</a> Turn text into angry messages</li>
+                <li><a href="https://megarion.github.io/TextTools/NOCOPY/" target="_blank">TextBypass <i>(formerly NoCopy)</i></a> Convert strings to special Unicode characters</li>
+                <li><a href="https://megarion.github.io/TextTools/Germanize/" target="_blank">Germanize</a> Convert text into a German accent (almost)</li>
+            </ul>
+        </li>
         <li><a href="https://github.com/Megarion/NoYoutubeShorts" target="_blank">NoYoutubeShorts</a> Chrome extension that lets you browse YouTube shorts like normal YouTube videos</li>
-        <li><a href="https://megarion.github.io/TextTools/NOCOPY/" target="_blank">TextBypass <i>(formerly NoCopy)</i></a> Convert strings to special Unicode characters</li>
     </ul><br>
 
     <h3>Other stuff</h3>
@@ -78,6 +84,31 @@
     
     <p>&copy; 2021-2023</p>
     </article>
+
+    <script>
+        const subLinks = document.querySelectorAll("#subLink");
+        function displaySubLink(show) {
+            if (show) {
+                for (const i of subLinks) {
+                    i.style.display = "block";
+                }
+                return
+            }
+
+            for (const i of subLinks) {
+                i.style.display = "none";
+            }
+        }
+
+        displaySubLink(false)
+        document.querySelector("#checkSub").addEventListener('change', (event) => {
+            if (event.currentTarget.checked) {
+                displaySubLink(true);
+            } else {
+                displaySubLink(false);
+            }
+        })
+    </script>
 </body>
 
 </html>
