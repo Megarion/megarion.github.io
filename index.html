@@ -53,71 +53,48 @@
     <article class="markdown-body">
     <h1>Megarion</h1>
 
-    <input type="checkbox" id="checkSub"> <i>Enable sub-links (for quicker navigation)</i>
-    <h3>Projects</h3>
+    <h2>Projects</h2>
     <ul>
         <li><a href="https://megarion.github.io/DemonlistBot/" target="_blank">DemonlistBot</a> <i>(Deprecated)</i> Discord bot to fetch the Geometry Dash Demonlist</li>
         <li><a href="https://github.com/Megarion/NoYoutubeShorts" target="_blank">NoYoutubeShorts</a> Chrome extension that lets you browse YouTube shorts like normal YouTube videos</li>
-    </ul><br>
+    </ul><br><br>
 
-    <h3>Other stuff</h3>
+    <h2>Other stuff</h2>
     <ul>
         <li><a href="https://megarion.github.io/neighbors/" target="_blank">neighbors</a> Experimental project that simulates moving houses in a neighborhood</li>
         <li><a href="https://megarion.github.io/mccg-archive/" target="_blank">mccg-archive</a> scuffed pve minecraft game</li>
         <li>
             <a href="https://megarion.github.io/TextTools/" target="_blank">TextTools</a> A collection of text converters
-            <ul id="subLink">
-                <li><a href="https://megarion.github.io/TextTools/Aggressify/" target="_blank">Aggressify</a> Turn text into angry messages</li>
-                <li><a href="https://megarion.github.io/TextTools/TextBypass/" target="_blank">TextBypass <i>(formerly NoCopy)</i></a> Convert strings to special Unicode characters</li>
-                <li><a href="https://megarion.github.io/TextTools/Germanize/" target="_blank">Germanize</a> Convert text into a German accent (almost)</li>
-            </ul>
+            <details>
+                <summary>Show more</summary>
+                <ul id="subLink">
+                    <li><a href="https://megarion.github.io/TextTools/Aggressify/" target="_blank">Aggressify</a> Turn text into angry messages</li>
+                    <li><a href="https://megarion.github.io/TextTools/TextBypass/" target="_blank">TextBypass <i>(formerly NoCopy)</i></a> Convert strings to special Unicode characters</li>
+                    <li><a href="https://megarion.github.io/TextTools/Germanize/" target="_blank">Germanize</a> Convert text into a German accent (almost)</li>
+                </ul>
+            </details>
         </li>
-    </ul><br>
+    </ul><br><br>
 
-    <h3>Docs</h3>
+    <h2>Docs</h2>
     <details>
         <summary>All docs sorted by time</summary>
         <ul>
             <li><i>Nothing yet!</i></li>
         </ul>
-    </details>
-
-    <h3>Links</h3>
+    </details><br><br>
+    
+    <h2>Links</h2>
     <ul>
         <li><a href="https://github.com/Megarion" target="_blank">GitHub</a></li>
         <li><a href="https://www.youtube.com/channel/UCBrlr_nVSQ_4kZtsY58Q8wA" target="_blank">YouTube</a></li>
         <li><a href="" onclick="return false;">Discord</a>: Megarion#0892</li>
         <li><a href="https://ch.tetr.io/u/megarion" target="_blank">tetr.io</a></li>
         <li>On some other coding sites, my username might be "<i>undefined</i>" (and variants, e.g "<i>undefinedd</i>")</li>
-    </ul>
+    </ul><br><br>
     
-    <p>&copy; 2021-2023</p>
+    <p>&copy; 2020-2023</p>
     </article>
-
-    <script>
-        const subLinks = document.querySelectorAll("#subLink");
-        function displaySubLink(show) {
-            if (show) {
-                for (const i of subLinks) {
-                    i.style.display = "block";
-                }
-                return
-            }
-
-            for (const i of subLinks) {
-                i.style.display = "none";
-            }
-        }
-
-        displaySubLink(false)
-        document.querySelector("#checkSub").addEventListener('change', (event) => {
-            if (event.currentTarget.checked) {
-                displaySubLink(true);
-            } else {
-                displaySubLink(false);
-            }
-        })
-    </script>
 </body>
 
 </html>
