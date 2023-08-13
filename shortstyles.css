@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap');
+
+body {
+    background-color: #14141a;
+    color: white;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px;
+}
+
+#main {
+    width: 80vw;
+    transform: translateX(10vw);
+    margin-bottom: 100px;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+a {
+    color: cyan;
+    transition: 0.2s ease-in-out;
+}

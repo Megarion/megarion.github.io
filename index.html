@@ -25,42 +25,62 @@
         gtag('config', 'G-TFLJKZZZVJ');
     </script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-dark.min.css" integrity="sha512-USRvpT7dJFA7mrRx4+esmy+2mYr8vlgmDLFpkNeVEd+D5CgQvULKPYVnDV97Ywfek+e//HdSA0NlaPe4oqkwfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
-    <link rel="stylesheet" href="/styles.css" >
+    <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
-    <article class="markdown-body">
-    <h1>Megarion</h1>
+    <div id="title">
+        <h1 style="display: inline;">Megarion</h1>
+        <p style="float: right; display: inline; opacity: 0.2;">&copy; 2020-2023</p>
+    </div>
 
-    <h2>Projects</h2>
-    <ul>
-        <li><a href="https://temp-anywhere.vercel.app/" target="_blank">Temperature Anywhere</a> Get weather data anywhere on the map</li>
-        <li><a href="https://megarion.github.io/DemonlistBot/" target="_blank">DemonlistBot</a> Discord bot to fetch the Geometry Dash Demonlist data</li>
-        <li><a href="https://github.com/Megarion/NoYoutubeShorts" target="_blank">NoYoutubeShorts</a> Chrome extension that lets you browse YouTube shorts like normal YouTube videos</li>
-    </ul>
-    <a href="all.html">More projects</a>
-    <br><br>
+    <div style="position: absolute; top: 0; left: 0;">
+        <div id="container"></div>
+        <div id="textArea">
+            <div id="textDisplay">
+                <!-- content here -->
+                <h1 id="textDisplayTitle">Section Title</h1>
+                <div id="textDisplayContent"></div>
+            </div>
+        </div>
+        <div id="main">
+            <div id="slider">
+                <div id="line"></div>
+                
+                <div class="point">
+                    <div>
+                        <h3>Projects</h3>
+                    </div>
+                    <img class="noSelect image" draggable="false" src="img/point.png">
+                    <img class="noSelect arrow" draggable="false" src="img/Arrow.png">
+                </div>
+                <div class="point">
+                    <div>
+                        <h3>Links</h3>
+                    </div>
+                    <img class="noSelect image" draggable="false" src="img/point.png">
+                    <img class="noSelect arrow" draggable="false" src="img/Arrow.png">
+                </div>
+                <div class="point">
+                    <div>
+                        <h3>Documents</h3>
+                    </div>
+                    <img class="noSelect image" draggable="false" src="img/point.png">
+                    <img class="noSelect arrow" draggable="false" src="img/Arrow.png">
+                </div>
+                <div class="point">
+                    <div>
+                        <h3>Dumpster</h3>
+                    </div>
+                    <img class="noSelect image" draggable="false" src="img/point.png">
+                    <img class="noSelect arrow" draggable="false" src="img/Arrow.png">
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- <h2>Docs</h2>
-    <details>
-        <summary>All docs sorted by time</summary>
-        <ul>
-            <li><i>Nothing yet!</i></li>
-        </ul>
-    </details><br><br> -->
-    
-    <h2>Links</h2>
-    <ul>
-        <li><a href="https://github.com/Megarion" target="_blank">GitHub</a></li>
-        <li><a href="https://www.youtube.com/channel/UCBrlr_nVSQ_4kZtsY58Q8wA" target="_blank">YouTube</a></li>
-        <li><a href="" onclick="return false;">Discord</a>: megarionn (Megarion#0892)</li>
-        <!-- <li><a href="https://ch.tetr.io/u/megarion" target="_blank">tetr.io</a></li> -->
-    </ul><br><br>
-    
-    <p>&copy; 2020-2023</p>
-    </article>
+    <script src="script.js"></script>
 </body>
 
 </html>
