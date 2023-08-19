@@ -218,8 +218,6 @@ window.onmousemove = e => {
 addEventListener("wheel", (e) => {
     const mouseMove = e.deltaY;
 
-    console.log(mouseMove);
-
     mouseMoved = clamp(0, mouseMove / 50 + prevMouseMoved, 100,
         function () {
             mouseDownAt = e.clientX;
