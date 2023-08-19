@@ -51,7 +51,6 @@ const slider = document.querySelector("#slider"),
                         </details>
                     </li>
                     <li><a href="https://megarion.github.io/neighbors/" target="_blank" title="A project to simulate neighbors moving without communication (can lead to some messy results)">neighbors</a></li>
-                    <li><a href="https://ssch-project.github.io/p-001" target="_blank">Aggressify</a></li>
                 </ul>
             </details>
         </details><br>
@@ -63,7 +62,10 @@ const slider = document.querySelector("#slider"),
             <li><a href="" onclick="return false;">Discord</a>: megarionn (Megarion#0892)</li>
             <li><a href="https://ch.tetr.io/u/megarion" target="_blank">tetr.io</a></li>
         </ul><button onclick="exit()">Exit</button>`),
-        new SECTION("Docs", `<p>Under construction :)</p><button onclick="exit()">Exit</button>`),
+        new SECTION("Videos", `<p>Under construction :)</p><button onclick="exit()">Exit</button>`),
+        new SECTION("Docs", `<p></p><ol reversed>
+            <li><a href="doc/1.html" target="_blank">No longer open-sourcing some projects</a></li>
+        </ol><button onclick="exit()">Exit</button>`),
         new SECTION("Dumpster", `<p>Under construction :)</p><button onclick="exit()">Exit</button>`),
     ];
 
@@ -212,3 +214,30 @@ window.onmousemove = e => {
         )
     }
 }
+
+addEventListener("wheel", (e) => {
+    const mouseMove = e.deltaY;
+
+    console.log(mouseMove);
+
+    mouseMoved = clamp(0, mouseMove / 50 + prevMouseMoved, 100,
+        function () {
+            mouseDownAt = e.clientX;
+            prevMouseMoved = mouseMoved;
+        }
+    ); // %
+
+    slider.animate(
+        { transform: `translate(${-mouseMoved}%, -50%)` },
+        { duration: 600, fill: "forwards" }
+    );
+
+    for (const i of points) {
+        i.animate(
+            { objectPosition: `${mouseMoved}% 50%` },
+            { duration: 600, fill: "forwards" }
+        )
+    }
+
+    prevMouseMoved = mouseMoved;
+});
