@@ -62,7 +62,6 @@ const slider = document.querySelector("#slider"),
             <li><a href="" onclick="return false;">Discord</a>: megarionn (Megarion#0892)</li>
             <li><a href="https://ch.tetr.io/u/megarion" target="_blank">tetr.io</a></li>
         </ul><button onclick="exit()">Exit</button>`),
-        new SECTION("Videos", `<p>Under construction :)</p><button onclick="exit()">Exit</button>`),
         new SECTION("Docs", `<p></p><ol reversed>
             <li><a href="doc/1.html" target="_blank">No longer open-sourcing some projects</a></li>
         </ol><button onclick="exit()">Exit</button>`),
