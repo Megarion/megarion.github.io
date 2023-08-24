@@ -18,6 +18,8 @@ const slider = document.querySelector("#slider"),
     maxDelta = window.innerWidth / 3 * 2,
     content = [
         new SECTION("Projects", `<ul>
+            <li><a href="https://megarion.itch.io/deadlined" target="_blank">DEADLINED</a> A 2D top-down shooter</li>
+            <li><a href="page/desktopchess/" target="_blank">Desktop Chess</a> Chess on the Windows 10 desktop</li>
             <li><a class="link" href="https://temp-anywhere.vercel.app/" target="_blank">Temperature Anywhere</a> Get weather data anywhere on the map</li>
             <li><a class="link" href="https://megarion.github.io/DemonlistBot/" target="_blank">DemonlistBot</a> Discord bot to fetch the Geometry Dash Demonlist data</li>
             <li><a class="link" href="https://github.com/Megarion/NoYoutubeShorts" target="_blank">NoYoutubeShorts</a> Chrome extension that lets you browse YouTube shorts like normal YouTube videos</li>
@@ -28,6 +30,7 @@ const slider = document.querySelector("#slider"),
             <details open>
                 <summary>2023</summary>
                 <ul>
+                    <li><a href="https://megarion.itch.io/deadlined" target="_blank" title="A 2D top-down shooter">DEADLINED</a></li>
                     <li><a href="page/desktopchess/" target="_blank" title="Chess on the Windows 10 desktop">Desktop Chess</a></li>
                     <li><a href="https://github.com/Megarion/minecraft-zombie-apocalypse" target="_blank" title="(Bad) Zombie apocalypse datapack">minecraft-zombie-apocalypse</a></li>
                     <li><a href="https://temp-anywhere.vercel.app/" target="_blank" title="Get weather data anywhere on the map">Temperature Anywhere</a></li>
@@ -86,12 +89,15 @@ let mouseDownAt = 0,
         left: 0
     }
 
+let allowScroll = true
+
 for (const i in points) {
     const img = points[i];
     img.onclick = function () {
         if (!sliderMoveAllow) { return; }
         currentImg = i;
         sliderMoveAllow = false;
+        allowScroll = false;
 
         originalPos.top = slider.getBoundingClientRect().top;
         originalPos.left = img.getBoundingClientRect().left;
@@ -103,7 +109,7 @@ for (const i in points) {
         container.animate(
             [
                 { top: `${originalPos.top+16}px`, left: `${originalPos.left+16}px`, width: "0px", height: "0px" },
-                { width: "3000px", height: "3000px", top: `${originalPos.top+16-1500}px`, left: `${originalPos.left+16-1500}px` }
+                { width: "200vmax", height: "200vmax", top: `calc(${originalPos.top+16}px - 100vmax)`, left: `calc(${originalPos.left+16}px - 100vmax)` }
             ],
             { duration: 600, fill: "forwards", easing: "ease-in-out" }
         );
@@ -137,7 +143,7 @@ function exit() {
     if (urlParams.get('gallery')==1){
         container.animate(
             [
-                { width: "3000px", height: "3000px", top: `${originalPos.top+16-1500}px`, left: `${originalPos.left+16-1500}px` },
+                { width: "200vmax", height: "200vmax", top: `calc(${originalPos.top+16}px - 100vmax)`, left: `calc(${originalPos.left+16}px - 100vmax)` },
                 { top: `${originalPos.top+16}px`, left: `${originalPos.left+16}px`, width: "0px", height: "0px" }
             ],
             { duration: 600, fill: "forwards", easing: "ease-in-out" }
@@ -162,7 +168,7 @@ function exit() {
         setTimeout(() => {
             container.animate(
                 [
-                    { width: "3000px", height: "3000px", top: `${originalPos.top+16-1500}px`, left: `${originalPos.left+16-1500}px` },
+                    { width: "200vmax", height: "200vmax", top: `calc(${originalPos.top+16}px - 100vmax)`, left: `calc(${originalPos.left+16}px - 100vmax)` },
                     { top: `${originalPos.top+16}px`, left: `${originalPos.left+16}px`, width: "0px", height: "0px" }
                 ],
                 { duration: 600, fill: "forwards", easing: "ease-in-out" }
@@ -176,6 +182,7 @@ function exit() {
     
         setTimeout(() => {
             sliderMoveAllow = true;
+            allowScroll = true;
         }, 1800);
     }
 }
@@ -191,7 +198,7 @@ window.onmouseup = e => {
 }
 
 window.onmousemove = e => {
-    if (!mouseDown || !sliderMoveAllow) { return; }
+    if (!mouseDown || !sliderMoveAllow || !allowScroll) { return; }
     const mouseMove = parseFloat(mouseDownAt) - e.clientX;
 
     mouseMoved = clamp(0, mouseMove / maxDelta * 100 + prevMouseMoved, 100,
@@ -215,6 +222,7 @@ window.onmousemove = e => {
 }
 
 addEventListener("wheel", (e) => {
+    if (!sliderMoveAllow || !allowScroll) { return; }
     const mouseMove = e.deltaY;
 
     mouseMoved = clamp(0, mouseMove / 50 + prevMouseMoved, 100,
