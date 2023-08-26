@@ -4,6 +4,10 @@
     --itemscount: 4
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     background-color: #0d0d11;
     color: white;
@@ -11,7 +15,6 @@ body {
     height: 100vh;
     width: 100vw;
     margin: 0;
-    overflow-x: hidden;
 }
 
 #title {
