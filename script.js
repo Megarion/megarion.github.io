@@ -190,7 +190,6 @@ function exit() {
 function down(e) {
     mouseDownAt = e.clientX;
     mouseDown = true;
-    console.log(1);
 }
 
 window.onmousedown = e => down(e);
@@ -199,7 +198,6 @@ ontouchstart = (e) => down(e);
 function up(e) {
     mouseDown = false;
     prevMouseMoved = mouseMoved;
-    console.log(2);
 }
 
 window.onmouseup = e => up(e);
