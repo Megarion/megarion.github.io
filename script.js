@@ -109,7 +109,7 @@ for (const i in points) {
         container.animate(
             [
                 { top: `${originalPos.top+16}px`, left: `${originalPos.left+16}px`, width: "0px", height: "0px" },
-                { width: "200vmax", height: "200vmax", top: `calc(${originalPos.top+16}px - 100vmax)`, left: `calc(${originalPos.left+16}px - 100vmax)` }
+                { width: "300vmax", height: "300vmax", top: `calc(${originalPos.top+16}px - 150vmax)`, left: `calc(${originalPos.left+16}px - 150vmax)` }
             ],
             { duration: 600, fill: "forwards", easing: "ease-in-out" }
         );
@@ -143,7 +143,7 @@ function exit() {
     if (urlParams.get('gallery')==1){
         container.animate(
             [
-                { width: "200vmax", height: "200vmax", top: `calc(${originalPos.top+16}px - 100vmax)`, left: `calc(${originalPos.left+16}px - 100vmax)` },
+                { width: "300vmax", height: "300vmax", top: `calc(${originalPos.top+16}px - 150vmax)`, left: `calc(${originalPos.left+16}px - 150vmax)` },
                 { top: `${originalPos.top+16}px`, left: `${originalPos.left+16}px`, width: "0px", height: "0px" }
             ],
             { duration: 600, fill: "forwards", easing: "ease-in-out" }
@@ -168,7 +168,7 @@ function exit() {
         setTimeout(() => {
             container.animate(
                 [
-                    { width: "200vmax", height: "200vmax", top: `calc(${originalPos.top+16}px - 100vmax)`, left: `calc(${originalPos.left+16}px - 100vmax)` },
+                    { width: "300vmax", height: "300vmax", top: `calc(${originalPos.top+16}px - 150vmax)`, left: `calc(${originalPos.left+16}px - 150vmax)` },
                     { top: `${originalPos.top+16}px`, left: `${originalPos.left+16}px`, width: "0px", height: "0px" }
                 ],
                 { duration: 600, fill: "forwards", easing: "ease-in-out" }
