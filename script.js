@@ -187,17 +187,25 @@ function exit() {
     }
 }
 
-window.onmousedown = e => {
+function down(e) {
     mouseDownAt = e.clientX;
     mouseDown = true;
+    console.log(1);
 }
 
-window.onmouseup = e => {
+window.onmousedown = e => down(e);
+ontouchstart = (e) => down(e);
+
+function up(e) {
     mouseDown = false;
     prevMouseMoved = mouseMoved;
+    console.log(2);
 }
 
-window.onmousemove = e => {
+window.onmouseup = e => up(e);
+ontouchend = (e) => up(e);
+
+function move(e) {
     if (!mouseDown || !sliderMoveAllow || !allowScroll) { return; }
     const mouseMove = parseFloat(mouseDownAt) - e.clientX;
 
@@ -220,6 +228,9 @@ window.onmousemove = e => {
         )
     }
 }
+
+window.onmousemove = e => move(e);
+touchmove = e => move(e);
 
 addEventListener("wheel", (e) => {
     if (!sliderMoveAllow || !allowScroll) { return; }
