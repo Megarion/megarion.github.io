@@ -147,10 +147,6 @@ body {
     width: 0;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
-/* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: #FF0000;
-}
 
 #textDisplayTitle {
     text-decoration: underline;
@@ -180,7 +176,7 @@ button {
     color: white;
     font-size: 18px;
     padding: 10px;
-    margin: 40px 10px;
+    margin: 20px 10px 90px 10px;
     border-radius: 5px;
     transition: 0.2s ease-in-out;
     box-shadow: -10px 10px 5px 2px rgba(0,0,0,0.75);
@@ -200,4 +196,10 @@ button:hover {
 a {
     color: cyan;
     transition: 0.2s ease-in-out;
+}
+
+/* Dumpster */
+#dumpContainer > * {
+    height: 350px;
+    width: auto;
 }
