@@ -146,6 +146,7 @@ for (const i in points) {
                 method: "GET",
             })
             .then(x => x.json())
+            .then(x => x.reverse())
             .then(x => {
                 console.log(x);
                 const unrecognized = [];
