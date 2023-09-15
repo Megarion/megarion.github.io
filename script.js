@@ -18,44 +18,9 @@ const slider = document.querySelector("#slider"),
     content = [
         new SECTION("Projects", `<ul>
             <li><a href="https://megarion.itch.io/deadlined" target="_blank">DEADLINED</a> A 2D top-down shooter</li>
-            <li><a href="page/desktopchess/" target="_blank">Desktop Chess</a> Chess on the Windows 10 desktop</li>
-            <li><a class="link" href="https://temp-anywhere.vercel.app/" target="_blank">Temperature Anywhere</a> Get weather data anywhere on the map</li>
-            <li><a class="link" href="https://megarion.github.io/DemonlistBot/" target="_blank">DemonlistBot</a> Discord bot to fetch the Geometry Dash Demonlist data</li>
-            <li><a class="link" href="https://github.com/Megarion/NoYoutubeShorts" target="_blank">NoYoutubeShorts</a> Chrome extension that lets you browse YouTube shorts like normal YouTube videos</li>
-        </ul><br>
-        <details>
-            <summary>All projects</summary>
-            <p>Hover over item for details</p>
-            <details open>
-                <summary>2023</summary>
-                <ul>
-                    <li><a href="https://megarion.itch.io/deadlined" target="_blank" title="A 2D top-down shooter">DEADLINED</a></li>
-                    <li><a href="page/desktopchess/" target="_blank" title="Chess on the Windows 10 desktop">Desktop Chess</a></li>
-                    <li><a href="https://github.com/Megarion/minecraft-zombie-apocalypse" target="_blank" title="(Bad) Zombie apocalypse datapack">minecraft-zombie-apocalypse</a></li>
-                    <li><a href="https://temp-anywhere.vercel.app/" target="_blank" title="Get weather data anywhere on the map">Temperature Anywhere</a></li>
-                    <li><a href="https://github.com/Megarion/NoYoutubeShorts" target="_blank" title="Chrome extension that lets you browse YouTube shorts like normal YouTube videos">NoYoutubeShorts</a></li>
-                    <li><a href="page/reactFlaskApi-template/" target="_blank" title="Template for a React app with Flask as backend">reactFlaskApi-template</a></li>
-                </ul>
-            </details>
-            <details>
-                <summary>2022</summary>
-                <ul>
-                    <li><a href="https://megarion.github.io/DemonlistBot/" target="_blank" title="Discord bot to fetch the Geometry Dash Demonlist data">DemonlistBot</a></li>
-                    <li><a href="https://github.com/Megarion/mccg-archive/" target="_blank" title="(Bad) Minecraft PVE map">mccg-archive</a></li>
-                    <li>
-                        <details>
-                            <summary><a href="https://megarion.github.io/TextTools/" target="_blank" title="Text conversion tools">TextTools</a></summary>
-                            <ul>
-                                <li><a href="https://megarion.github.io/TextTools/Germanize/" target="_blank">Germanize</a></li>
-                                <li><a href="https://megarion.github.io/TextTools/TextBypass/" target="_blank">TextBypass <i>(formerly NoCopy)</i></a></li>
-                                <li><a href="https://megarion.github.io/TextTools/Aggressify/" target="_blank">Aggressify</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li><a href="https://megarion.github.io/neighbors/" target="_blank" title="A project to simulate neighbors moving without communication (can lead to some messy results)">neighbors</a></li>
-                </ul>
-            </details>
-        </details><br>
+        </ul>
+        <br>
+        <p>Other filler projects are on my <a href="https://github.com/Megarion" target="_blank">GitHub</a></p>
         <p>Most of my projects are licensed under the <a href="https://github.com/Megarion/megarion.github.io/blob/main/LICENSE" target="_blank">GPL-3.0 license</a></p>
         <button onclick="exit()">Exit</button>`),
         new SECTION("Links", `<ul>
