@@ -178,7 +178,7 @@ for (const i in points) {
                     
                     // plain text + unrecognized
                     unrecognized.push(video.split(" ")[1]);
-                }).join(" ") + "</div>";
+                }).join("") + "</div>";
 
                 textDisplayContent.innerHTML += `<br><br><br>Unrecognized files: <pre>${unrecognized.map(x => '<a target="_blank" href="'+x+'">'+x.split("/").slice(-1)+'</a>').join("<br>")}</pre>`;
             });
