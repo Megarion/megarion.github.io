@@ -29,10 +29,8 @@ const slider = document.querySelector("#slider"),
             <li><a href="" onclick="return false;">Discord</a>: megarionn (Megarion#0892)</li>
             <li><a href="https://ch.tetr.io/u/megarion" target="_blank">tetr.io</a></li>
         </ul><button onclick="exit()">Exit</button>`),
-        new SECTION("Docs", `<p></p><ol reversed>
-            <li><a href="doc/1.html" target="_blank">No longer open-sourcing some projects</a></li>
-        </ol><button onclick="exit()">Exit</button>`),
-        new SECTION("Dumpster", ``), // filled in by code
+        new SECTION("...", `<p>Under construction</p><button onclick="exit()">Exit</button>`),
+        new SECTION("...", `<p>Under construction</p><button onclick="exit()">Exit</button>`),
     ];
 
 function clamp(min, num, max, exceedFunction) {
@@ -104,50 +102,6 @@ for (const i in points) {
             ],
             { duration: 600, fill: "forwards", easing: "ease-in-out" }
         );
-
-        // DUMPSTER CODE
-        if (currentImg == 3){
-            fetch("https://sender.megarion.repl.co/data.json", {
-                method: "GET",
-            })
-            .then(x => x.json())
-            .then(x => x.reverse())
-            .then(x => {
-                console.log(x);
-                const unrecognized = [];
-
-                textDisplayContent.innerHTML = '<button onclick="exit()">Exit</button><div id="dumpContainer">' + x.map(x => {
-                    const video = x.video;
-                    const id = `${video.split(" ")[0]}-${video.split("/").slice(-1)}`;
-
-                    for (const i of filetypes[0]) {
-                        if (!video.endsWith(i)){
-                            continue;
-                        }
-                        return `<img src="https://sender.megarion.repl.co/video/${id}">`;
-                    }
-
-                    for (const i of filetypes[1]) {
-                        if (!video.endsWith(i)){
-                            continue;
-                        }
-                        return `<audio controls><source src="https://sender.megarion.repl.co/video/${id}"></audio>`;
-                    }
-
-                    for (const i of filetypes[2]) {
-                        if (!video.endsWith(i)){
-                            continue;
-                        }
-                        return `<video controls><source src="https://sender.megarion.repl.co/video/${id}"></video>`;
-                    }
-                    
-                    // plain text + unrecognized
-                    unrecognized.push(video.split(" ")[1]);
-                }).join("") + "</div>";
-
-                textDisplayContent.innerHTML += `<br><br><br>Unrecognized files: <pre>${unrecognized.map(x => '<a target="_blank" href="'+x+'">'+x.split("/").slice(-1)+'</a>').join("<br>")}</pre>`;
-            });
-        }
     }
 }
 
