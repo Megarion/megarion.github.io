@@ -17,7 +17,7 @@ const slider = document.querySelector("#slider"),
     maxDelta = window.innerWidth / 3 * 2,
     content = [
         new SECTION("Projects", `<ul>
-            <li><a href="https://megarion.itch.io/deadlined" target="_blank">DEADLINED</a> A 2D top-down shooter</li>
+            <li>Soon</li>
         </ul>
         <br>
         <p>Other filler projects are on my <a href="https://github.com/Megarion" target="_blank">GitHub</a></p>
